@@ -106,6 +106,15 @@ The set of interfaces through which an attacker can reach a system; on agents, e
 A concrete route by which an attacker enters an agentic system and influences it, such as indirect prompt injection or tool poisoning.
 
 
+<a id="term-auditable-key-directory"></a>
+
+**auditable key directory** — *可审计密钥目录*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+An append-only directory of account-to-key mappings that issues inclusion and history proofs so anyone can audit it.
+
+It would not stop a malicious server associating the wrong key with a user, but it would make the tampering evident, which is how the paper frames its value for password managers.
+
+
 <a id="term-authenticated-encryption"></a>
 
 **authenticated encryption** — *认证加密*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 1</span>
@@ -378,6 +387,15 @@ Using time-limited tokens that expire automatically, shrinking the exposure wind
 A security principle, named among further principles that also apply to agents, favouring the smallest set of mechanisms that achieves the protection, to keep the design auditable and maintainable.
 
 
+<a id="term-enclave"></a>
+
+**enclave** — *安全区*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+A protected region inside a processor that keeps code and data hidden from the machine's operator, used to hold recovery keys.
+
+Secure Value Recovery deliberately spreads trust over enclaves of different architectures, on the observation that an attacker is unlikely to break several of them at once.
+
+
 <a id="term-encryption-type-attribute"></a>
 
 **Encryption Type Attribute** — *加密类型属性*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 7</span>
@@ -544,6 +562,15 @@ A technique that labels each datum, propagates the labels through the system, an
 A predefined partial order of security labels from which information flow control draws each datum's label and allowed propagation.
 
 
+<a id="term-injection-attack"></a>
+
+**injection attack** — *注入攻击*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+An attack in which the adversary controls only their own client, injects payloads into a victim's client, then observes protected state.
+
+Fábrega et al. use sharing to inject payloads and observe encrypted vault exports or server traffic, backing out passwords, URLs, usernames and attachments. The malicious party is the client, not the server.
+
+
 <a id="term-input-guardrail"></a>
 
 **input guardrail** — *输入护栏*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 6</span>
@@ -630,6 +657,15 @@ Attacks BW07 and LP04 lower it because the settings are stored unencrypted and u
 Establishing that a public key delivered by the server really belongs to the party it claims to represent.
 
 The attacks in this chapter exist because Bitwarden and LastPass never do it; both take the escrow public keys from the server on trust, which Table 1 records as "Lack of Key Auth".
+
+
+<a id="term-key-commitment"></a>
+
+**key commitment** — *密钥承诺*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+A property asking that a ciphertext decrypt under only one key, so nobody can open it to two different messages.
+
+The paper itself does not raise key commitment, and none of the works surveyed here give it a role in this setting, so it is on the list of unaddressed properties.
 
 
 <a id="term-key-rotation"></a>
@@ -725,6 +761,15 @@ The LastPass enterprise feature that lets a super admin reset a team member's ma
 The selected user's client encrypts its user key under each admin's RSA public key, and the browser extension is the only client that supports this key exchange, which is the setting for attack LP01.
 
 
+<a id="term-master-password-protected-password-management-protocol"></a>
+
+**master-password-protected password management protocol** — *主密码保护的密码管理协议*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+The client-server interaction of a password manager, in which one master password authenticates the user and unwraps the vault.
+
+Duan, Wang and Fu recover the de facto protocols of 43 managers and formalise them as ideal functionalities in the universal composability framework.
+
+
 <a id="term-memory-poisoning"></a>
 
 **Memory poisoning** — *记忆投毒*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 4</span>
@@ -792,6 +837,15 @@ System-wide visibility over inputs, outputs and intermediate states, used to sur
 **oblivious client operations** — *不经意客户端操作*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 2</span>
 
 The goal that a client performs its work without revealing what it is accessing to the server.
+
+
+<a id="term-offline-guessing-attack"></a>
+
+**offline guessing attack** — *离线猜测攻击*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+Guessing a master password from data the adversary already holds, without touching the live service, so rate limits do not apply.
+
+Duan et al. split these into four types by adversary knowledge and find 38 of 43 managers vulnerable to at least one, showing single-master-password designs lean on slow hashing and password entropy.
 
 
 <a id="term-organisation-injection"></a>
@@ -1038,6 +1092,15 @@ The component-organised catalogue of agent security risks, R1 to R7, onto which 
 R1 heterogeneous untrusted interfaces, R2 wrong instruction following, R3 unconstrained/unsafe data flow and R4 hallucination and model mistakes are the model-side risks; R5 private data leakage, R6 unintended/unauthorized action and data corruption, and R7 resource drain and denial of service are the consequence risks.
 
 
+<a id="term-roll-back-attack"></a>
+
+**roll-back attack** — *回滚攻击*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+Replaying an older, validly signed or encrypted vault version to undo changes or revive revoked access.
+
+The paper finds that Merkle-tree authentication blocks selective deletion but cannot rule out complete roll-back without a trusted third party holding versioning information or local cryptographic state.
+
+
 <a id="term-rsa-oaep"></a>
 
 **RSA-OAEP** — *RSA-OAEP 加密*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 3</span>
@@ -1077,6 +1140,15 @@ Confining a tool or environment to a restricted execution copy, as PFI does when
 **Secure by Design** — *安全设计*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 1</span>
 
 Defense that builds security into an agent's structure and design choices rather than adding it at run time.
+
+
+<a id="term-secure-value-recovery"></a>
+
+**Secure Value Recovery** — *安全值恢复*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+Signal's PIN-based key recovery system, layered across several enclaves and cloud providers so no single one can recover a secret.
+
+Connell et al. report that it limits PIN guesses unconditionally inside enclave memory, with rollback protection, which is the property the paper wants from hardware-backed key escrow.
 
 
 <a id="term-security-label"></a>

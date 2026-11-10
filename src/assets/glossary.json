@@ -65,6 +65,46 @@
   "brief": "The key that actually encrypts a vault; it is itself protected by a key derived from the master password."
  },
  {
+  "id": "term-auditable-key-directory",
+  "term": "auditable key directory",
+  "brief": "An append-only directory of account-to-key mappings that issues inclusion and history proofs so anyone can audit it."
+ },
+ {
+  "id": "term-enclave",
+  "term": "enclave",
+  "brief": "A protected region inside a processor that keeps code and data hidden from the machine's operator, used to hold recovery keys."
+ },
+ {
+  "id": "term-injection-attack",
+  "term": "injection attack",
+  "brief": "An attack in which the adversary controls only their own client, injects payloads into a victim's client, then observes protected state."
+ },
+ {
+  "id": "term-key-commitment",
+  "term": "key commitment",
+  "brief": "A property asking that a ciphertext decrypt under only one key, so nobody can open it to two different messages."
+ },
+ {
+  "id": "term-master-password-protected-password-management-protocol",
+  "term": "master-password-protected password management protocol",
+  "brief": "The client-server interaction of a password manager, in which one master password authenticates the user and unwraps the vault."
+ },
+ {
+  "id": "term-offline-guessing-attack",
+  "term": "offline guessing attack",
+  "brief": "Guessing a master password from data the adversary already holds, without touching the live service, so rate limits do not apply."
+ },
+ {
+  "id": "term-roll-back-attack",
+  "term": "roll-back attack",
+  "brief": "Replaying an older, validly signed or encrypted vault version to undo changes or revive revoked access."
+ },
+ {
+  "id": "term-secure-value-recovery",
+  "term": "Secure Value Recovery",
+  "brief": "Signal's PIN-based key recovery system, layered across several enclaves and cloud providers so no single one can recover a secret."
+ },
+ {
   "id": "term-ciphertext-integrity",
   "term": "ciphertext integrity",
   "brief": "The property that an adversary cannot alter stored or transmitted ciphertext undetectably."

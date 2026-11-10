@@ -65,6 +65,46 @@
   "brief": "真正加密保险库的密钥，它本身由主密码派生的密钥保护。"
  },
  {
+  "id": "term-auditable-key-directory",
+  "term": "可审计密钥目录",
+  "brief": "只可追加的账号到公钥映射目录，出具包含性与历史证明供人审计。"
+ },
+ {
+  "id": "term-enclave",
+  "term": "安全区",
+  "brief": "处理器内受保护的区域，使代码与数据对机器运营方保密，可用来保管恢复密钥。"
+ },
+ {
+  "id": "term-injection-attack",
+  "term": "注入攻击",
+  "brief": "对手只控制自己的客户端，向受害者客户端注入选定负载，再观察受保护状态的攻击。"
+ },
+ {
+  "id": "term-key-commitment",
+  "term": "密钥承诺",
+  "brief": "要求一段密文只能在唯一密钥下解密，使他人无法把它解成两条不同消息。"
+ },
+ {
+  "id": "term-master-password-protected-password-management-protocol",
+  "term": "主密码保护的密码管理协议",
+  "brief": "密码管理器客户端与服务器之间的交互，用户靠单一主密码完成认证并解开保险库。"
+ },
+ {
+  "id": "term-offline-guessing-attack",
+  "term": "离线猜测攻击",
+  "brief": "仅凭已到手的数据猜测主密码，不接触在线服务，故不受速率限制约束。"
+ },
+ {
+  "id": "term-roll-back-attack",
+  "term": "回滚攻击",
+  "brief": "重放较早且签名或加密均合法的保险库版本，以撤销改动或恢复已收回的权限。"
+ },
+ {
+  "id": "term-secure-value-recovery",
+  "term": "安全值恢复",
+  "brief": "Signal 基于 PIN 的密钥恢复系统，跨多个安全区与云厂商分层，使任何单一一方都无法恢复秘密。"
+ },
+ {
   "id": "term-ciphertext-integrity",
   "term": "密文完整性",
   "brief": "攻击者无法在不被察觉的情况下改动所存或所传密文的性质。"

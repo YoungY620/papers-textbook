@@ -131,6 +131,104 @@
   chapter: '1'
   first_seen: Chapter 1
   paper: 'SoK: Agentic AI'
+- term: auditable key directory
+  term_zh: 可审计密钥目录
+  pinyin: ke
+  brief: An append-only directory of account-to-key mappings that issues inclusion and history proofs
+    so anyone can audit it.
+  brief_zh: 只可追加的账号到公钥映射目录，出具包含性与历史证明供人审计。
+  detail: It would not stop a malicious server associating the wrong key with a user, but it would make
+    the tampering evident, which is how the paper frames its value for password managers.
+  detail_zh: 它无法阻止恶意服务器给用户配错公钥，但能使篡改可见，论文正是据此评估它对密码管理器的价值。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
+- term: enclave
+  term_zh: 安全区
+  pinyin: an
+  brief: A protected region inside a processor that keeps code and data hidden from the machine's operator,
+    used to hold recovery keys.
+  brief_zh: 处理器内受保护的区域，使代码与数据对机器运营方保密，可用来保管恢复密钥。
+  detail: Secure Value Recovery deliberately spreads trust over enclaves of different architectures, on
+    the observation that an attacker is unlikely to break several of them at once.
+  detail_zh: Secure Value Recovery 有意把信任分摊到不同架构的安全区上，依据是对手不太可能同时攻破多个。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
+- term: injection attack
+  term_zh: 注入攻击
+  pinyin: zhu
+  brief: An attack in which the adversary controls only their own client, injects payloads into a victim's
+    client, then observes protected state.
+  brief_zh: 对手只控制自己的客户端，向受害者客户端注入选定负载，再观察受保护状态的攻击。
+  detail: Fábrega et al. use sharing to inject payloads and observe encrypted vault exports or server
+    traffic, backing out passwords, URLs, usernames and attachments. The malicious party is the client,
+    not the server.
+  detail_zh: Fábrega 等借共享注入负载，并观察加密保险库导出或服务器流量，从而反推密码、URL、用户名与附件。这里恶意方是客户端而非服务器。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
+- term: key commitment
+  term_zh: 密钥承诺
+  pinyin: mi
+  brief: A property asking that a ciphertext decrypt under only one key, so nobody can open it to two
+    different messages.
+  brief_zh: 要求一段密文只能在唯一密钥下解密，使他人无法把它解成两条不同消息。
+  detail: The paper itself does not raise key commitment, and none of the works surveyed here give it
+    a role in this setting, so it is on the list of unaddressed properties.
+  detail_zh: 论文本身没有提到密钥承诺，本章查阅的工作也未曾让它在本文场景里发挥作用，因此它属于尚未处理的性质。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
+- term: master-password-protected password management protocol
+  term_zh: 主密码保护的密码管理协议
+  pinyin: zhu
+  brief: The client-server interaction of a password manager, in which one master password authenticates
+    the user and unwraps the vault.
+  brief_zh: 密码管理器客户端与服务器之间的交互，用户靠单一主密码完成认证并解开保险库。
+  detail: Duan, Wang and Fu recover the de facto protocols of 43 managers and formalise them as ideal
+    functionalities in the universal composability framework.
+  detail_zh: Duan、Wang 与 Fu 还原出 43 款管理器的实际协议，并在通用可组合框架下把它们形式化为理想功能。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
+- term: offline guessing attack
+  term_zh: 离线猜测攻击
+  pinyin: li
+  brief: Guessing a master password from data the adversary already holds, without touching the live service,
+    so rate limits do not apply.
+  brief_zh: 仅凭已到手的数据猜测主密码，不接触在线服务，故不受速率限制约束。
+  detail: Duan et al. split these into four types by adversary knowledge and find 38 of 43 managers vulnerable
+    to at least one, showing single-master-password designs lean on slow hashing and password entropy.
+  detail_zh: Duan 等按对手掌握的信息把它们分为四类，发现 43 款管理器里有 38 款无法抵御至少一类，说明单一主密码设计依赖慢哈希与密码熵。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
+- term: roll-back attack
+  term_zh: 回滚攻击
+  pinyin: hui
+  brief: Replaying an older, validly signed or encrypted vault version to undo changes or revive revoked
+    access.
+  brief_zh: 重放较早且签名或加密均合法的保险库版本，以撤销改动或恢复已收回的权限。
+  detail: The paper finds that Merkle-tree authentication blocks selective deletion but cannot rule out
+    complete roll-back without a trusted third party holding versioning information or local cryptographic
+    state.
+  detail_zh: 论文发现 Merkle 树认证能挡住选择性删除，但若无可信第三方持有版本信息或本地密码学状态，完整的回滚无法排除。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
+- term: Secure Value Recovery
+  term_zh: 安全值恢复
+  pinyin: an
+  brief: Signal's PIN-based key recovery system, layered across several enclaves and cloud providers so
+    no single one can recover a secret.
+  brief_zh: Signal 基于 PIN 的密钥恢复系统，跨多个安全区与云厂商分层，使任何单一一方都无法恢复秘密。
+  detail: Connell et al. report that it limits PIN guesses unconditionally inside enclave memory, with
+    rollback protection, which is the property the paper wants from hardware-backed key escrow.
+  detail_zh: Connell 等报告它在安全区内存内无条件限制 PIN 猜测次数并带回滚保护，这正是论文希望硬件托底的密钥托管具备的性质。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
 - term: ciphertext integrity
   term_zh: 密文完整性
   pinyin: mi

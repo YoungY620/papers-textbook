@@ -8,6 +8,24 @@
 
 ## A
 
+<a id="term-secure-value-recovery"></a>
+
+**安全值恢复** — *Secure Value Recovery*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+Signal 基于 PIN 的密钥恢复系统，跨多个安全区与云厂商分层，使任何单一一方都无法恢复秘密。
+
+Connell 等报告它在安全区内存内无条件限制 PIN 猜测次数并带回滚保护，这正是论文希望硬件托底的密钥托管具备的性质。
+
+
+<a id="term-enclave"></a>
+
+**安全区** — *enclave*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+处理器内受保护的区域，使代码与数据对机器运营方保密，可用来保管恢复密钥。
+
+Secure Value Recovery 有意把信任分摊到不同架构的安全区上，依据是对手不太可能同时攻破多个。
+
+
 <a id="term-security-label"></a>
 
 **安全标签** — *security label*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 6 章</span>
@@ -387,6 +405,15 @@ R5、R6、R7，其严重程度由访问敏感度、操作与用户界面决定�
 仅在当前会话内留存、会话结束即被丢弃的记忆。
 
 
+<a id="term-roll-back-attack"></a>
+
+**回滚攻击** — *roll-back attack*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+重放较早且签名或加密均合法的保险库版本，以撤销改动或恢复已收回的权限。
+
+论文发现 Merkle 树认证能挡住选择性删除，但若无可信第三方持有版本信息或本地密码学状态，完整的回滚无法排除。
+
+
 <a id="gloss-j"></a>
 
 ## J
@@ -511,6 +538,15 @@ Bitwarden 于 2024 年 7 月上线。旧条目不会补上它，且只有条目�
 基于硬件的隔离区域，机密计算在其中管理智能体凭证，使其免受外围软件触及。
 
 
+<a id="term-auditable-key-directory"></a>
+
+**可审计密钥目录** — *auditable key directory*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+只可追加的账号到公钥映射目录，出具包含性与历史证明供人审计。
+
+它无法阻止恶意服务器给用户配错公钥，但能使篡改可见，论文正是据此评估它对密码管理器的价值。
+
+
 <a id="term-client-side-encryption"></a>
 
 **客户端加密** — *client-side encryption*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 1 章</span>
@@ -539,6 +575,15 @@ Bitwarden 中由主密钥的 enc 与 mac 输出拼接成的 64 字节密钥 k_em
 <a id="gloss-l"></a>
 
 ## L
+
+<a id="term-offline-guessing-attack"></a>
+
+**离线猜测攻击** — *offline guessing attack*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+仅凭已到手的数据猜测主密码，不接触在线服务，故不受速率限制约束。
+
+Duan 等按对手掌握的信息把它们分为四类，发现 43 款管理器里有 38 款无法抵御至少一类，说明单一主密码设计依赖慢哈希与密码熵。
+
 
 <a id="term-flexibility-spectrum"></a>
 
@@ -602,6 +647,15 @@ Bitwarden 中由主密钥的 enc 与 mac 输出拼接成的 64 字节密钥 k_em
 **密钥封装** — *key wrapping*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 1 章</span>
 
 用一把密钥加密另一把密钥，使被封装者可安全存储或传输。
+
+
+<a id="term-key-commitment"></a>
+
+**密钥承诺** — *key commitment*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+要求一段密文只能在唯一密钥下解密，使他人无法把它解成两条不同消息。
+
+论文本身没有提到密钥承诺，本章查阅的工作也未曾让它在本文场景里发挥作用，因此它属于尚未处理的性质。
 
 
 <a id="term-key-substitution"></a>
@@ -1272,6 +1326,24 @@ Dashlane 事务内容开头的若干字节，规定 KDF 及其参数、分组密
 **直接提示注入** — *Direct prompt injection*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 4 章</span>
 
 用户或界面直接发给智能体的恶意提示词，指示它违背系统提示词行事。
+
+
+<a id="term-master-password-protected-password-management-protocol"></a>
+
+**主密码保护的密码管理协议** — *master-password-protected password management protocol*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+密码管理器客户端与服务器之间的交互，用户靠单一主密码完成认证并解开保险库。
+
+Duan、Wang 与 Fu 还原出 43 款管理器的实际协议，并在通用可组合框架下把它们形式化为理想功能。
+
+
+<a id="term-injection-attack"></a>
+
+**注入攻击** — *injection attack*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+对手只控制自己的客户端，向受害者客户端注入选定负载，再观察受保护状态的攻击。
+
+Fábrega 等借共享注入负载，并观察加密保险库导出或服务器流量，从而反推密码、URL、用户名与附件。这里恶意方是客户端而非服务器。
 
 
 <a id="term-per-item-key"></a>
