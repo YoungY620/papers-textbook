@@ -192,6 +192,21 @@
   chapter: '10'
   first_seen: Chapter 10
   paper: 'SoK: Agentic AI'
+- term: Model Context Protocol
+  term_zh: 模型上下文协议
+  pinyin: mo
+  brief: An open protocol for defining, discovering and invoking external tools for AI applications, with
+    dynamic schema negotiation and bi-directional channels, so tools become portable across models and
+    frameworks.
+  brief_zh: 一套为 AI 应用定义、发现与调用外部工具的开放协议，具备动态 schema 协商与双向通道，使工具可在不同模型与框架间通用。
+  detail: The SoK notes tools may be implemented through such protocols; being standardised makes the
+    discovery channel an attack surface. Hou et al. enumerate sixteen threat scenarios including tool
+    poisoning, and ETDI, MCP Context Protector and MCIP are the hardening responses.
+  detail_zh: SoK 指出工具可以经由这类协议实现；标准化同时使发现通道成为攻击面。Hou 等人枚举了包含工具投毒在内的十六种威胁场景，ETDI、MCP Context Protector 与
+    MCIP 即是相应的加固方案。
+  chapter: '10'
+  first_seen: Chapter 10
+  paper: 'SoK: Agentic AI'
 - term: offline guessing attack
   term_zh: 离线猜测攻击
   pinyin: li
@@ -621,6 +636,10 @@
   chapter: '4.1'
   first_seen: Chapter 4
   paper: 'SoK: Agentic AI'
+  detail: The SoK classifies it as vector V1, an external adversary's vector. Greshake et al. established
+    it and InjecAgent benchmarked it; it assumes the agent reads attacker-reachable content, which is
+    the "arbitrary external data" end of the input trust dimension.
+  detail_zh: SoK 将其归为外部攻击者的向量 V1，由 Greshake 等人奠定、InjecAgent 加以基准化；它假定智能体会读取攻击者可达的内容，对应"输入信任"维度上"任意外部数据"的一端。
 - term: Internal adversary
   term_zh: 内部对手
   pinyin: nei
@@ -660,6 +679,10 @@
   chapter: '4.1'
   first_seen: Chapter 4
   paper: 'SoK: Agentic AI'
+  detail: Vector V6, the SoK's internal-adversary vector. AgentPoison backdoors memory or RAG bases at
+    a poison rate below 0.1% with at least 80% success, PoisonedRAG corrupts a knowledge base, and MINJA
+    reaches the same effect through query-only interaction.
+  detail_zh: SoK 中属内部攻击者的向量 V6。AgentPoison 以低于 0.1% 的毒化率取得至少 80% 的后门成功率，PoisonedRAG 污染知识库，MINJA 则仅靠查询交互达到同等效果。
 - term: MITRE ATLAS
   term_zh: MITRE ATLAS
   pinyin: m
@@ -687,6 +710,10 @@
   chapter: '4.1'
   first_seen: Chapter 4
   paper: 'SoK: Agentic AI'
+  detail: Spracklen et al. measured at least 5.2% hallucinated packages for commercial models and 21.7%
+    for open-source ones over 576,000 samples, with 205,474 unique names. The SoK files it both as data
+    injection (V2) and as exploitation of hallucination (R4).
+  detail_zh: Spracklen 等人在 576,000 个样本上测得商业模型至少 5.2%、开源模型至少 21.7% 的包名不存在，共 205,474 个唯一名字。SoK 同时把它归入数据注入（V2）与幻觉被利用（R4）。
 - term: RAG poisoning
   term_zh: 检索增强生成投毒
   pinyin: jian
@@ -716,6 +743,11 @@
   chapter: '4.1'
   first_seen: Chapter 4
   paper: 'SoK: Agentic AI'
+  detail: Vector V3 in the SoK. Two representative results — Les Dissonances hijacks the order of tool
+    execution and found 75% of 66 real tools vulnerable; ToolHijacker optimises a tool document to force
+    selection and defeats StruQ, SecAlign, known-answer detection, DataSentinel and perplexity detection.
+  detail_zh: SoK 中的向量 V3。两个代表性结果：Les Dissonances 劫持工具执行顺序，发现 66 个真实工具中 75% 可被利用；ToolHijacker 优化工具文档以强制选中，可绕过
+    StruQ、SecAlign、已知答案检测、DataSentinel 与困惑度检测。
 - term: User-level adversary
   term_zh: 用户级对手
   pinyin: yong
@@ -1283,6 +1315,12 @@
   chapter: 5.2.3
   first_seen: Chapter 6
   paper: 'SoK: Agentic AI'
+  detail: In agents it addresses unconstrained data flow (R3) and downstream leakage (R5) and corruption
+    (R6). PFI, CaMeL and FIDES replace tool results with trackable variables; CaMeL solves 77% of AgentDojo
+    tasks with provable security against 84% undefended. The SoK's stated gap is runtime cost and label
+    creep.
+  detail_zh: 在智能体中它针对不受约束的数据流（R3）及其下游的泄露（R5）与篡改（R6）。PFI、CaMeL、FIDES 把工具结果替换为可追踪变量；CaMeL 在 AgentDojo 上以可证明安全性完成
+    77% 的任务，未防护为 84%。SoK 指出的缺口是运行时开销与标签蔓延。
 - term: information flow lattice
   term_zh: 信息流格
   pinyin: xin
@@ -1301,6 +1339,9 @@
   chapter: 5.2.3
   first_seen: Chapter 6
   paper: 'SoK: Agentic AI'
+  detail: The SoK names it as an open problem for agent information flow control, alongside runtime overhead;
+    closing it requires principled declassification rules that relax labels only when it is safe.
+  detail_zh: SoK 把它列为智能体信息流控制的开放问题之一（另一项是运行时开销）；解决它需要原则性的降级规则，只在确实安全时放宽标签。
 - term: over-tainting
   term_zh: 过度污点标记
   pinyin: guo
@@ -1328,6 +1369,11 @@
   chapter: 5.2.3
   first_seen: Chapter 6
   paper: 'SoK: Agentic AI'
+  detail: The SoK's information flow control category covers both. In agents, mechanisms split into symbolic-variable,
+    multi-execution and model-based approaches, and the design axis is whether the goal is integrity,
+    blocking untrusted input from steering tool calls, or confidentiality, keeping secrets out of untrusted
+    sinks.
+  detail_zh: SoK 的"信息流控制与污点追踪"类别同时涵盖二者。智能体中的机制分符号变量、多次执行与模型判定三类，设计轴在于目标是完整性（阻止不可信输入左右工具调用）还是机密性（不让秘密流向不可信终点）。
 - term: log granularity
   term_zh: 日志粒度
   pinyin: ri
@@ -1364,6 +1410,10 @@
   chapter: 5.2.5
   first_seen: Chapter 6
   paper: 'SoK: Agentic AI'
+  detail: The SoK treats it as comparatively unique to agents, mitigates R5-R7, and designs it along validation
+    scope, alert content and recurrence policy. Its stated limitations are decision fatigue and a mismatch
+    between the security literacy alerts assume and what users have.
+  detail_zh: SoK 认为它相对而言为智能体特有，缓解 R5–R7，并从验证范围、告警内容、复用策略三个维度设计。其局限是决策疲劳，以及告警预设的安全素养与用户实际水平之间的落差。
 - term: containerisation
   term_zh: 容器化
   pinyin: rong
@@ -1409,6 +1459,11 @@
   chapter: 5.3.1
   first_seen: Chapter 7
   paper: 'SoK: Agentic AI'
+  detail: In agents it mitigates wrong instruction following (R2) and unconstrained data flow (R3). The
+    SoK names the shared axis the papers leave implicit — vertical separation on the planner–parser line
+    versus horizontal separation by application or scope, as in IsolateGPT's per-application agents.
+  detail_zh: 在智能体中它缓解错误指令遵循（R2）与不受约束的数据流（R3）。SoK 点出各论文未言明的共同轴：沿"规划器—解析器"的纵向分离，与按应用或范围的横向分离（如 IsolateGPT
+    的按应用子智能体）。
 - term: sandboxing
   term_zh: 沙箱化
   pinyin: sha

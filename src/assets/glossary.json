@@ -90,6 +90,11 @@
   "brief": "The client-server interaction of a password manager, in which one master password authenticates the user and unwraps the vault."
  },
  {
+  "id": "term-model-context-protocol",
+  "term": "Model Context Protocol",
+  "brief": "An open protocol for defining, discovering and invoking external tools for AI applications, with dynamic schema negotiation and bi-directional channels, so tools become portable across models and frameworks."
+ },
+ {
   "id": "term-offline-guessing-attack",
   "term": "offline guessing attack",
   "brief": "Guessing a master password from data the adversary already holds, without touching the live service, so rate limits do not apply."

@@ -91,6 +91,8 @@ Secure Value Recovery 有意把信任分摊到不同架构的安全区上，依�
 
 保守标签传播的失效：标签过于严格使智能体不可用，除非有安全的降级规则。
 
+SoK 把它列为智能体信息流控制的开放问题之一（另一项是运行时开销）；解决它需要原则性的降级规则，只在确实安全时放宽标签。
+
 
 <a id="term-oblivious-client-operations"></a>
 
@@ -303,6 +305,8 @@ Dashlane 事务开头标明其密钥派生函数、密码算法与工作模式�
 
 第三方工具的名称、描述或实现中夹带恶意提示词或代码，随工具定义被加载。
 
+SoK 中的向量 V3。两个代表性结果：Les Dissonances 劫持工具执行顺序，发现 66 个真实工具中 75% 可被利用；ToolHijacker 优化工具文档以强制选中，可绕过 StruQ、SecAlign、已知答案检测、DataSentinel 与困惑度检测。
+
 
 <a id="term-attack-vector"></a>
 
@@ -438,6 +442,8 @@ R5、R6、R7，其严重程度由访问敏感度、操作与用户界面决定�
 
 直接操纵智能体持久记忆以注入内容、改变行为或泄露数据，写入会跨会话存续。
 
+SoK 中属内部攻击者的向量 V6。AgentPoison 以低于 0.1% 的毒化率取得至少 80% 的后门成功率，PoisonedRAG 污染知识库，MINJA 则仅靠查询交互达到同等效果。
+
 
 <a id="term-rsa-oaep"></a>
 
@@ -488,6 +494,8 @@ Bitwarden 密文前不受保护的标记：type 0 表示认证加密，type 1 �
 **间接提示注入** — *Indirect prompt injection*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 4 章</span>
 
 把指令藏在智能体检索到的内容（网页、文档、邮件等）中，诱导模型照做。
+
+SoK 将其归为外部攻击者的向量 V1，由 Greshake 等人奠定、InjecAgent 加以基准化；它假定智能体会读取攻击者可达的内容，对应"输入信任"维度上"任意外部数据"的一端。
 
 
 <a id="term-downgrade-to-legacy"></a>
@@ -674,6 +682,15 @@ Duan 等按对手掌握的信息把它们分为四类，发现 43 款管理器�
 讲者建议把密钥透明用于共享中的公钥认证，并把 HSM 用于密钥托管、把密钥分离用于部分保险库同步。
 
 
+<a id="term-model-context-protocol"></a>
+
+**模型上下文协议** — *Model Context Protocol*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 10 章</span>
+
+一套为 AI 应用定义、发现与调用外部工具的开放协议，具备动态 schema 协商与双向通道，使工具可在不同模型与框架间通用。
+
+SoK 指出工具可以经由这类协议实现；标准化同时使发现通道成为攻击面。Hou 等人枚举了包含工具投毒在内的十六种威胁场景，ETDI、MCP Context Protector 与 MCIP 即是相应的加固方案。
+
+
 <a id="term-model-context-protocol-mcp"></a>
 
 **模型上下文协议** — *Model Context Protocol (MCP)*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 2 章</span>
@@ -759,6 +776,8 @@ Duan 等按对手掌握的信息把它们分为四类，发现 43 款管理器�
 
 给不同组件分配不同权限并加以隔离，使控制一个组件的攻击者无法触及其余组件。
 
+在智能体中它缓解错误指令遵循（R2）与不受约束的数据流（R3）。SoK 点出各论文未言明的共同轴：沿"规划器—解析器"的纵向分离，与按应用或范围的横向分离（如 IsolateGPT 的按应用子智能体）。
+
 
 <a id="gloss-r"></a>
 
@@ -776,6 +795,8 @@ Duan 等按对手掌握的信息把它们分为四类，发现 43 款管理器�
 **人在回路验证** — *human-in-the-loop validation*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 6 章</span>
 
 智能体在高风险动作前请求用户批准，由用户掌控安全决策的防护机制。
+
+SoK 认为它相对而言为智能体特有，缓解 R5–R7，并从验证范围、告警内容、复用策略三个维度设计。其局限是决策疲劳，以及告警预设的安全素养与用户实际水平之间的落差。
 
 
 <a id="term-task-level-identity"></a>
@@ -827,6 +848,8 @@ Duan 等按对手掌握的信息把它们分为四类，发现 43 款管理器�
 **软件包幻觉** — *Package hallucination*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 4 章</span>
 
 代码生成模型凭空编造包名的缺陷，攻击者抢注这些包名以植入恶意软件包。
+
+Spracklen 等人在 576,000 个样本上测得商业模型至少 5.2%、开源模型至少 21.7% 的包名不存在，共 205,474 个唯一名字。SoK 同时把它归入数据注入（V2）与幻觉被利用（R4）。
 
 
 <a id="gloss-s"></a>
@@ -1086,6 +1109,8 @@ R6 同时涵盖非预期/未授权操作，例如未授权购买或任意代码�
 
 标记不可信数据并追踪其传播，从而约束受不可信来源影响的数据。
 
+SoK 的"信息流控制与污点追踪"类别同时涵盖二者。智能体中的机制分符号变量、多次执行与模型判定三类，设计轴在于目标是完整性（阻止不可信输入左右工具调用）还是机密性（不让秘密流向不可信终点）。
+
 
 <a id="gloss-x"></a>
 
@@ -1128,6 +1153,8 @@ Formal-LLM 用以编码工具调用顺序等规划约束、限制规划生成的
 **信息流控制** — *information flow control*  <span class='bd-gloss-alpha'>首见: SoK: Agentic AI · 第 6 章</span>
 
 为数据分配信息流格中的安全标签并传播，阻断违反格约束的流动。
+
+在智能体中它针对不受约束的数据流（R3）及其下游的泄露（R5）与篡改（R6）。PFI、CaMeL、FIDES 把工具结果替换为可追踪变量；CaMeL 在 AgentDojo 上以可证明安全性完成 77% 的任务，未防护为 84%。SoK 指出的缺口是运行时开销与标签蔓延。
 
 
 <a id="term-information-flow-lattice"></a>

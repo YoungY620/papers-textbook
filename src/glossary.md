@@ -520,6 +520,8 @@ Privilege separation between parallel sub-agents at disjoint access scopes, as w
 
 A defense in which the agent requests user approval before high-risk actions, giving the user control over security decisions.
 
+The SoK treats it as comparatively unique to agents, mitigates R5-R7, and designs it along validation scope, alert content and recurrence policy. Its stated limitations are decision fatigue and a mismatch between the security literacy alerts assume and what users have.
+
 
 <a id="gloss-i"></a>
 
@@ -547,12 +549,16 @@ Covering identity management, access control and credential management, to ensur
 
 Instructions hidden in content the agent retrieves, such as a web page, document or email, which the model then follows as commands.
 
+The SoK classifies it as vector V1, an external adversary's vector. Greshake et al. established it and InjecAgent benchmarked it; it assumes the agent reads attacker-reachable content, which is the "arbitrary external data" end of the input trust dimension.
+
 
 <a id="term-information-flow-control"></a>
 
 **information flow control** — *信息流控制*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 6</span>
 
 A technique that labels each datum, propagates the labels through the system, and blocks flows that violate the label constraints.
+
+In agents it addresses unconstrained data flow (R3) and downstream leakage (R5) and corruption (R6). PFI, CaMeL and FIDES replace tool results with trackable variables; CaMeL solves 77% of AgentDojo tasks with provable security against 84% undefended. The SoK's stated gap is runtime cost and label creep.
 
 
 <a id="term-information-flow-lattice"></a>
@@ -724,6 +730,8 @@ Attack BWb1, which uses Bitwarden's keypair-generation path to obtain AES-CBC en
 
 Conservative label propagation so restrictive that the agent becomes unusable unless safe declassification rules exist.
 
+The SoK names it as an open problem for agent information flow control, alongside runtime overhead; closing it requires principled declassification rules that relax labels only when it is safe.
+
 
 <a id="term-llm-defined-workflow"></a>
 
@@ -776,6 +784,8 @@ Duan, Wang and Fu recover the de facto protocols of 43 managers and formalise th
 
 Direct manipulation of the agent's persistent memory to inject content, alter behaviour or leak data; the write survives across sessions.
 
+Vector V6, the SoK's internal-adversary vector. AgentPoison backdoors memory or RAG bases at a poison rate below 0.1% with at least 80% success, PoisonedRAG corrupts a knowledge base, and MINJA reaches the same effect through query-only interaction.
+
 
 <a id="term-memory-separation"></a>
 
@@ -796,6 +806,15 @@ A hash structure that authenticates the whole vault, used to block selective del
 **MITRE ATLAS** — *MITRE ATLAS*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 4</span>
 
 A public knowledge base of adversary tactics and techniques against AI systems; Appendix A maps the paper's attack vectors onto it.
+
+
+<a id="term-model-context-protocol"></a>
+
+**Model Context Protocol** — *模型上下文协议*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
+
+An open protocol for defining, discovering and invoking external tools for AI applications, with dynamic schema negotiation and bi-directional channels, so tools become portable across models and frameworks.
+
+The SoK notes tools may be implemented through such protocols; being standardised makes the discovery channel an attack surface. Hou et al. enumerate sixteen threat scenarios including tool poisoning, and ETDI, MCP Context Protector and MCIP are the hardening responses.
 
 
 <a id="term-model-context-protocol-mcp"></a>
@@ -936,6 +955,8 @@ Marking more data as untrusted than necessary, which variable-based taint tracki
 
 A model limitation in which code-generating LLMs invent package names; attackers register those names to plant malicious packages.
 
+Spracklen et al. measured at least 5.2% hallucinated packages for commercial models and 21.7% for open-source ones over 576,000 samples, with 205,474 unique names. The SoK files it both as data injection (V2) and as exploitation of hallucination (R4).
+
 
 <a id="term-payload-format"></a>
 
@@ -999,6 +1020,8 @@ Named R5, a confidentiality failure and the risk R3 most directly enables. Patte
 **privilege separation** — *权限分离*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 7</span>
 
 Assigning different privilege levels to components and isolating them, so an attacker who controls one cannot reach the others.
+
+In agents it mitigates wrong instruction following (R2) and unconstrained data flow (R3). The SoK names the shared axis the papers leave implicit — vertical separation on the planner–parser line versus horizontal separation by application or scope, as in IsolateGPT's per-application agents.
 
 
 <a id="term-prompt-injection"></a>
@@ -1250,6 +1273,8 @@ Each such account carries an RSA key pair (sk_adm, pk_adm); their public keys ar
 
 A technique that marks untrusted data and follows its propagation, so data influenced by untrusted sources can be constrained.
 
+The SoK's information flow control category covers both. In agents, mechanisms split into symbolic-variable, multi-execution and model-based approaches, and the design axis is whether the goal is integrity, blocking untrusted input from steering tool calls, or confidentiality, keeping secrets out of untrusted sinks.
+
 
 <a id="term-task-level-identity"></a>
 
@@ -1272,6 +1297,8 @@ This work uses three: external, user-level, and internal adversaries.
 **Tool poisoning** — *工具投毒*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 4</span>
 
 A third-party tool whose name, description or implementation carries a malicious prompt or code, loaded with the tool definition.
+
+Vector V3 in the SoK. Two representative results — Les Dissonances hijacks the order of tool execution and found 75% of 66 real tools vulnerable; ToolHijacker optimises a tool document to force selection and defeats StruQ, SecAlign, known-answer detection, DataSentinel and perplexity detection.
 
 
 <a id="term-transaction-key"></a>
