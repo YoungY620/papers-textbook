@@ -195,9 +195,8 @@
 - term: Model Context Protocol
   term_zh: 模型上下文协议
   pinyin: mo
-  brief: An open protocol for defining, discovering and invoking external tools for AI applications, with
-    dynamic schema negotiation and bi-directional channels, so tools become portable across models and
-    frameworks.
+  brief: An open protocol to define, discover and invoke external tools, with schema negotiation and bi-directional
+    channels, making tools portable.
   brief_zh: 一套为 AI 应用定义、发现与调用外部工具的开放协议，具备动态 schema 协商与双向通道，使工具可在不同模型与框架间通用。
   detail: The SoK notes tools may be implemented through such protocols; being standardised makes the
     discovery channel an attack surface. Hou et al. enumerate sixteen threat scenarios including tool

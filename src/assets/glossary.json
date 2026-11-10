@@ -92,7 +92,7 @@
  {
   "id": "term-model-context-protocol",
   "term": "Model Context Protocol",
-  "brief": "An open protocol for defining, discovering and invoking external tools for AI applications, with dynamic schema negotiation and bi-directional channels, so tools become portable across models and frameworks."
+  "brief": "An open protocol to define, discover and invoke external tools, with schema negotiation and bi-directional channels, making tools portable."
  },
  {
   "id": "term-offline-guessing-attack",

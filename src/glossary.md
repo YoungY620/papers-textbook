@@ -812,7 +812,7 @@ A public knowledge base of adversary tactics and techniques against AI systems; 
 
 **Model Context Protocol** — *模型上下文协议*  <span class='bd-gloss-alpha'>First seen: SoK: Agentic AI · Chapter 10</span>
 
-An open protocol for defining, discovering and invoking external tools for AI applications, with dynamic schema negotiation and bi-directional channels, so tools become portable across models and frameworks.
+An open protocol to define, discover and invoke external tools, with schema negotiation and bi-directional channels, making tools portable.
 
 The SoK notes tools may be implemented through such protocols; being standardised makes the discovery channel an attack surface. Hou et al. enumerate sixteen threat scenarios including tool poisoning, and ETDI, MCP Context Protector and MCIP are the hardening responses.
 
