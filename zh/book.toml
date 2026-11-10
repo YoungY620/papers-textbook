@@ -1,0 +1,20 @@
+[book]
+title = "USENIX Security '26 论文精读"
+description = "逐章精读安全领域论文，中英双语。"
+language = "zh"
+src = "src"
+
+[preprocessor.mathprotect]
+command = "python3 ../tools/protect_math.py"
+
+[output.html]
+additional-css = ["bd.css"]
+additional-js = ["bd-lang.js", "bd-cjksearch.js", "bd-glossary.js"]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/YoungY620/papers-textbook"
+edit-url-template = "https://github.com/YoungY620/papers-textbook/edit/main/zh/src/{path}"
+
+[output.html.search]
+limit-results = 30
+use-boolean-and = true

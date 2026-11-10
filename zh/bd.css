@@ -1,0 +1,85 @@
+/* Shared presentation layer: math, glossary tooltips, language switch. */
+
+mjx-container {
+  font-size: 1.04em;
+}
+
+.bd-math-display {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.15em 0;
+}
+
+mjx-container[display="true"] {
+  margin: 0.9em 0 !important;
+}
+
+/* Glossary term: subtle underline, hover/focus shows the one-line gloss. */
+.bd-gloss {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--links, #4183c4);
+  cursor: help;
+}
+
+.bd-gloss:focus-visible {
+  outline: 2px solid var(--links, #4183c4);
+  outline-offset: 2px;
+}
+
+.bd-gloss:hover::after,
+.bd-gloss:focus::after {
+  content: attr(data-brief);
+  position: absolute;
+  left: 0;
+  bottom: 140%;
+  z-index: 60;
+  width: max-content;
+  max-width: min(22rem, 80vw);
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--table-border-color, #ccc);
+  border-radius: 6px;
+  background: var(--bg, #fff);
+  color: var(--fg, #111);
+  font-size: 0.86em;
+  line-height: 1.4;
+  font-style: normal;
+  text-align: left;
+  white-space: normal;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
+/* Term list on the glossary page. */
+.bd-gloss-entry {
+  margin: 0.9rem 0 1.1rem;
+}
+
+.bd-gloss-entry dt {
+  font-weight: 700;
+}
+
+.bd-gloss-entry dd {
+  margin: 0.2rem 0 0 1.2rem;
+}
+
+.bd-gloss-alpha {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-right: 0.6rem;
+}
+
+#bd-lang-switch {
+  display: flex;
+  align-items: center;
+}
+
+#bd-lang-switch a {
+  padding: 0 0.55rem;
+  font-size: 1.05rem;
+  line-height: var(--menu-bar-height, 50px);
+  height: var(--menu-bar-height, 50px);
+  white-space: nowrap;
+}

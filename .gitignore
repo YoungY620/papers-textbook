@@ -1,0 +1,7 @@
+book/
+zh/book/
+_site/
+_materials/
+.DS_Store
+__pycache__/
+node_modules/

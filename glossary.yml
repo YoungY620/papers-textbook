@@ -1,0 +1,1693 @@
+- term: account recovery
+  term_zh: 账户恢复
+  pinyin: zhang
+  brief: A feature that lets a user (or an administrator) regain access after forgetting the master password.
+  brief_zh: 让用户（或管理员）在忘记主密码后重新取回访问权的功能。
+  detail: Recovery is where security and usability pull in opposite directions, and it is the feature
+    the key escrow attacks exploit.
+  detail_zh: 恢复功能是安全与可用性相冲突之处，也正是密钥托管类攻击所利用的功能。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: Agentic AI System
+  term_zh: 智能体 AI 系统
+  pinyin: zhi
+  brief: A system that combines large language models with traditional software components so it can act
+    autonomously and use tools.
+  brief_zh: 把大语言模型与传统软件组件组合在一起、可自主行动并调用工具的系统。
+  detail: Used interchangeably with "AI agent" throughout the source work; the unit of analysis is the
+    whole system, not the model alone.
+  detail_zh: 与"AI 智能体"互换使用；分析的单元是整个系统，而非单独的模型。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: authenticated encryption
+  term_zh: 认证加密
+  pinyin: ren
+  brief: An encryption mode that also proves the ciphertext was not altered, unlike plain AES-CBC.
+  brief_zh: 同时能证明密文未被改动的加密模式，与单纯 AES-CBC 不同。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: client-side encryption
+  term_zh: 客户端加密
+  pinyin: ke
+  brief: Encrypting data on the user's own device before it is sent to the server.
+  brief_zh: 在用户设备上先行加密，再把密文发送给服务器。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: Component Hardening
+  term_zh: 组件加固
+  pinyin: zu
+  brief: Defense that strengthens an individual agent component, such as the model, memory, or a tool,
+    against the attacks that target it.
+  brief_zh: 加固智能体的单个组件（如模型、记忆或工具），以抵御针对它的攻击。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: end-to-end encryption
+  term_zh: 端到端加密
+  pinyin: duan
+  brief: A design in which only the endpoints hold the keys, so the server handles ciphertext it cannot
+    read.
+  brief_zh: 只有通信两端持有密钥、服务器只经手无法读取的密文的设计。
+  detail: Vendors of cloud storage and password managers often label this Zero Knowledge Encryption, which
+    the paper treats as a claim to be tested rather than a property.
+  detail_zh: 云存储与密码管理器厂商常把这种设计称为零知识加密，论文则把它当作待检验的声明而非既有性质。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: key substitution
+  term_zh: 密钥替换
+  pinyin: mi
+  brief: An attack that swaps a victim's public key for the attacker's, so later traffic is encrypted
+    to the attacker.
+  brief_zh: 把受害者的公钥换成攻击者的公钥，使后续通信被加密给攻击者。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: key wrapping
+  term_zh: 密钥封装
+  pinyin: mi
+  brief: Encrypting one key under another, so the wrapped key can be stored or transported in the clear.
+  brief_zh: 用一把密钥加密另一把密钥，使被封装者可安全存储或传输。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: Prompt Injection
+  term_zh: 提示注入
+  pinyin: ti
+  brief: An attack in which attacker-supplied content is crafted to make an agent follow malicious instructions
+    instead of the intended ones.
+  brief_zh: 攻击者构造内容，使智能体执行恶意指令而非用户或开发者本意的攻击。
+  detail: Direct injection arrives as the user's own input; indirect injection arrives through external
+    data the agent retrieves, such as a web page or document.
+  detail_zh: 直接注入来自用户自身输入；间接注入则经由智能体检索到的外部数据（如网页或文档）进入。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: Runtime Protection
+  term_zh: 运行时防护
+  pinyin: yun
+  brief: Defense mechanisms that enforce security during agent execution, detecting real-time threats
+    and behaviors as the agent acts.
+  brief_zh: 在智能体执行过程中实施安全约束、实时检测威胁与行为的防护机制。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+  detail: Covers input guardrails, output guardrails, information flow control and taint tracking, monitoring,
+    and human-in-the-loop validation.
+  detail_zh: 包含输入护栏、输出护栏、信息流控制与污点追踪、监控以及人在回路验证五类。
+- term: Secure by Design
+  term_zh: 安全设计
+  pinyin: an
+  brief: Defense that builds security into an agent's structure and design choices rather than adding
+    it at run time.
+  brief_zh: 把安全性构建进智能体的结构与设计选择中，而非在运行时才追加。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: self-hosting
+  term_zh: 自托管
+  pinyin: zi
+  brief: Running the server component of a product on your own infrastructure instead of the vendor's.
+  brief_zh: 把产品的服务端组件部署在自己的基础设施上，而非依赖厂商。
+  detail: Some password managers let an organisation self-host the storage element; in the paper's threat
+    model the malicious server is then the customer's own server.
+  detail_zh: 部分密码管理器允许组织自行托管存储部分；在论文的威胁模型下，恶意服务器此时就是客户自己的服务器。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: vault key
+  term_zh: 保险库密钥
+  pinyin: bao
+  brief: The key that actually encrypts a vault; it is itself protected by a key derived from the master
+    password.
+  brief_zh: 真正加密保险库的密钥，它本身由主密码派生的密钥保护。
+  detail: In the talk's model, the master password wraps the vault key, and the vault key encrypts the
+    vault, so the master password is never used to encrypt items directly.
+  detail_zh: 按报告的描述，主密码封装保险库密钥，保险库密钥再加密保险库，主密码并不直接用于加密条目。
+  chapter: '1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: ciphertext integrity
+  term_zh: 密文完整性
+  pinyin: mi
+  brief: The property that an adversary cannot alter stored or transmitted ciphertext undetectably.
+  brief_zh: 攻击者无法在不被察觉的情况下改动所存或所传密文的性质。
+  chapter: '2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: coordinated vulnerability disclosure
+  term_zh: 协同漏洞披露
+  pinyin: xie
+  brief: Reporting flaws privately to a vendor and agreeing on a publication date before going public.
+  brief_zh: 先私下向厂商报告漏洞，商定发表日期后再公开的做法。
+  detail: The paper follows this approach with a window of at least 90 days per vendor and a common public
+    date of 14 February 2026.
+  detail_zh: 论文对每家厂商给出至少 90 天窗口，并统一把公开日期定为 2026 年 2 月 14 日。
+  chapter: '2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: Defense in Depth
+  term_zh: 纵深防御
+  pinyin: zong
+  brief: A principle of layering multiple independent defenses so that no single failure of one protection
+    lets an attack succeed.
+  brief_zh: 叠加多层相互独立的防护，使任一防护失效都不至于让攻击得逞的原则。
+  chapter: '2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+  detail: Realised by input and output guardrails, information flow control, monitoring, access control,
+    privilege separation, component hardening and human-in-the-loop validation.
+  detail_zh: 由输入与输出护栏、信息流控制、监控、访问控制、权限分离、组件加固与人在回路验证共同实现。
+- term: iteration count
+  term_zh: 迭代次数
+  pinyin: die
+  brief: How many times a key-derivation function repeats, which sets the cost of guessing a password.
+  brief_zh: 密钥派生函数重复的轮数，决定猜测口令所需的代价。
+  detail: A malicious server can lower it, removing brute-force protection; the paper's BW07 and DL03
+    attacks do exactly this.
+  detail_zh: 恶意服务器可以把它调低，从而消除暴力破解保护；论文的 BW07 与 DL03 攻击正是如此。
+  chapter: '2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: oblivious client operations
+  term_zh: 不经意客户端操作
+  pinyin: bu
+  brief: The goal that a client performs its work without revealing what it is accessing to the server.
+  brief_zh: 客户端在不向服务器泄露自己访问内容的前提下完成操作的目标。
+  chapter: '2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: vault indistinguishability
+  term_zh: 保险库不可区分性
+  pinyin: bao
+  brief: The goal that an adversary cannot even tell vaults apart, beyond their plaintext contents.
+  brief_zh: 攻击者连保险库彼此都区分不开的目标，比只知道明文更进一步。
+  chapter: '2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: Action Space
+  term_zh: 动作空间
+  pinyin: dong
+  brief: The set of operations an agent can perform through its tools, spanning three types — read, write,
+    and execute.
+  brief_zh: 智能体借助工具可执行的操作集合，包含读、写、执行三类。
+  chapter: '3.1'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: AES-CBC-HMAC
+  term_zh: AES-CBC-HMAC 认证加密
+  pinyin: ren
+  brief: Encrypt-then-MAC with AES-CBC and an HMAC over the ciphertext; Bitwarden's construction, dropped
+    to bare AES-CBC when no MAC key is present.
+  brief_zh: 用 AES-CBC 加密再对密文做 HMAC；Bitwarden 的构造，缺少 MAC 密钥时退化为纯 AES-CBC。
+  chapter: '3.1'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: AI Agent
+  term_zh: AI 智能体
+  pinyin: zhi
+  brief: A hybrid software system combining traditional software components with neural components, which
+    takes a user task and acts on it.
+  brief_zh: 把传统软件组件与神经组件组合起来，接收任务并为用户采取一系列动作的混合软件系统。
+  chapter: '3.1'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: extended master key
+  term_zh: 扩展主密钥
+  pinyin: kuo
+  brief: In Bitwarden, the 64-byte key k_em formed by concatenating the HKDF-Expand "enc" and "mac" outputs
+    of the master key.
+  brief_zh: Bitwarden 中由主密钥的 enc 与 mac 输出拼接成的 64 字节密钥 k_em。
+  detail: It encrypts the randomly sampled user key, so that the ciphertext c_u stored on the server can
+    only be opened with the master password.
+  detail_zh: 它用于加密随机采样的用户密钥，因此服务器上保存的密文 c_u 只有用主密码才能解开。
+  chapter: '3.1'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Model Context Protocol (MCP)
+  term_zh: 模型上下文协议
+  pinyin: mo
+  brief: A standardized protocol through which tools can be implemented and made available to an agent.
+  brief_zh: 一种标准化协议，工具可经其实现并供智能体调用。
+  chapter: '3.1'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: organisation key
+  term_zh: 团队密钥
+  pinyin: tuan
+  brief: The 64-byte symmetric key k_org that encrypts the items of a Bitwarden organisation; membership
+    means being able to recover it.
+  brief_zh: 加密 Bitwarden 团队条目的 64 字节对称密钥 k_org；能否取得它即决定成员资格。
+  chapter: '3.1'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: per-item key
+  term_zh: 逐条目密钥
+  pinyin: zhu
+  brief: A key sampled for one vault item and itself encrypted under the user key, used by Bitwarden for
+    items created since version 2024.2.0.
+  brief_zh: 为单个保险库条目采样、本身又由用户密钥加密的密钥，Bitwarden 自 2024.2.0 起用于新条目。
+  detail: Introduced in Bitwarden v.2024.2.0 as k_u^i. Old items are not migrated, so a vault can contain
+    items encrypted directly under the user key and items encrypted under per-item keys at the same time.
+  detail_zh: Bitwarden v.2024.2.0 引入，记作 k_u^i。旧条目不会被迁移，因此同一保险库中可能同时存在直接用用户密钥加密的条目和使用条目密钥的条目。
+  chapter: '3.1'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Retrieval Tool
+  term_zh: 检索工具
+  pinyin: jian
+  brief: A tool giving an agent read-only access to the external environment, such as searching or reading
+    a file, rather than modifying it.
+  brief_zh: 赋予智能体对外部环境只读访问的工具（如搜索或读取文件），区别于会修改环境的工具。
+  chapter: '3.1'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: user key
+  term_zh: 用户密钥
+  pinyin: yong
+  brief: The 64-byte symmetric key that protects every item in a Bitwarden or LastPass vault, stored on
+    the server only in encrypted form.
+  brief_zh: 保护 Bitwarden 或 LastPass 保险库中所有条目的 64 字节对称密钥，在服务器上仅以密文存在。
+  chapter: '3.1'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Access Sensitivity
+  term_zh: 访问敏感度
+  pinyin: fang
+  brief: How much sensitive data an agent may reach, from none, to known sensitive data sources, to arbitrary
+    sensitive data.
+  brief_zh: 智能体可触达的敏感数据范围，从不访问，到已知敏感数据源，再到任意敏感数据。
+  detail: Higher levels make harder tasks possible but widen the scope of a breach, because the same flexibility
+    that enables the task also determines how much a compromised agent can reach.
+  detail_zh: 更高的档位让更复杂的任务成为可能，同时扩大被攻破时的触达范围：让任务可行的灵活性，也决定了被攻陷的智能体能触达多少数据。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Agent Design Dimensions
+  term_zh: 智能体设计维度
+  pinyin: zhi
+  brief: Seven axes — input trust, access sensitivity, workflow, action, memory, tool, user interface
+    — characterizing an agent's design flexibility.
+  brief_zh: 刻画智能体设计及其灵活性的七个维度：输入信任、访问敏感性、工作流、动作、记忆、工具、用户界面。
+  detail: The dimensions are orthogonal, so one agent can sit at different levels on different axes at
+    the same time.
+  detail_zh: 各维度彼此正交，同一智能体可在不同维度上处于不同层级。
+  chapter: '3.2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: Attack Surface
+  term_zh: 攻击面
+  pinyin: gong
+  brief: The set of interfaces through which an attacker can reach a system; on agents, external data,
+    memory and third-party tools widen it.
+  brief_zh: 攻击者可以借此触达系统的接口集合；对智能体而言，外部数据、记忆与第三方工具都会扩大它。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Design Dimension
+  term_zh: 设计维度
+  pinyin: she
+  brief: One of seven axes along which an agent's design varies, each a continuum of flexibility from
+    least to most flexible.
+  brief_zh: 刻画智能体设计的七条轴之一，每条轴都是一条从最不灵活到最灵活的连续谱。
+  detail: The dimensions are input trust, access sensitivity, workflow, action, memory, tool and user
+    interface. They are orthogonal, so one agent can hold a different level on each of them at once, and
+    higher flexibility on any of them amplifies security risk.
+  detail_zh: 七个维度是输入信任、访问敏感度、工作流、动作、记忆、工具与用户界面。它们彼此正交，同一个智能体可以在各维度上处于不同档位，任一维度上更高的灵活性都会放大安全风险。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Design Flexibility
+  term_zh: 设计灵活性
+  pinyin: she
+  brief: How far an agent's design sits toward the flexible end of each dimension; greater flexibility
+    generally amplifies security risk.
+  brief_zh: 智能体设计在各维度上偏向最不灵活或最灵活一端的程度；灵活性越大通常越放大安全风险。
+  chapter: '3.2'
+  first_seen: Chapter 2
+  paper: 'SoK: Agentic AI'
+- term: Developer-Defined Workflow
+  term_zh: 开发者定义的工作流
+  pinyin: kai
+  brief: A fixed action sequence written in advance by the agent's developers, the moderately flexible
+    level of the workflow dimension.
+  brief_zh: 由开发者事先写定的固定动作序列，是工作流维度的中等灵活档位。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Execution Action
+  term_zh: 执行动作
+  pinyin: zhi
+  brief: An operation that modifies the environment rather than only reading it, the most flexible level
+    of the action dimension.
+  brief_zh: 会修改环境而非只读取环境的操作，是动作维度的最灵活档位。
+  detail: 'Execution is where an agent''s mistakes stop being textual: it is the point at which information
+    disclosure becomes corruption of the environment.'
+  detail_zh: 执行是智能体的错误不再局限于文本的地方：也正是在这里，信息泄露变成对环境的破坏。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Flexibility Spectrum
+  term_zh: 灵活性连续谱
+  pinyin: ling
+  brief: 'The range of settings a design dimension takes, illustrated by three representative levels:
+    least, moderately and most flexible.'
+  brief_zh: 一个设计维度可取值的范围，用最不灵活、中等灵活、最灵活三个代表性档位表示。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Input Trust
+  term_zh: 输入信任
+  pinyin: shu
+  brief: How trustworthy the external data sources an agent relies on are; it runs from no external data
+    to arbitrary, potentially untrusted sources.
+  brief_zh: 智能体所依赖的外部数据源的可信程度，从不使用外部数据到任意的、可能不可信的来源。
+  detail: The highest-trust setting uses no external data; the most flexible setting accepts arbitrary
+    external data. Indirect prompt injection is only reachable on this dimension once the agent consumes
+    external content.
+  detail_zh: 可信度最高的档位不使用外部数据，最灵活的档位接受任意外部数据。只有当智能体开始消费外部内容，间接提示注入才在该维度上成为可能。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: LLM-Defined Workflow
+  term_zh: 大模型定义的工作流
+  pinyin: da
+  brief: An action sequence composed at run time by the model rather than fixed in advance, the most flexible
+    level of the workflow dimension.
+  brief_zh: 由模型在运行时组合、而非事先固定的动作序列，是工作流维度的最灵活档位。
+  detail: Flexible control flow is what lets an agent adapt to tasks it was not written for, and it is
+    also what gives injected content more opportunity to hijack the agent's reasoning.
+  detail_zh: 灵活的控制流让智能体能适应并未为之编写的任务，也让注入内容有更多机会劫持智能体的推理。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Orthogonal Dimensions
+  term_zh: 正交维度
+  pinyin: zheng
+  brief: The property that the design dimensions can coexist in one agent, which may hold different levels
+    on different dimensions.
+  brief_zh: 各设计维度可共存于同一个智能体、且可在不同维度上处于不同档位的性质。
+  detail: Orthogonality means an agent can be at the most flexible level on all seven dimensions at once;
+    it does not mean the dimensions are independent in effect, since the tool dimension enables the action
+    dimension.
+  detail_zh: 正交意味着同一智能体可以在全部七个维度上同时处于最灵活档位；它并不意味着各维度在效果上互不相干，因为工具维度直接使能动作维度。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Persistent Cross-Session Memory
+  term_zh: 跨会话持久记忆
+  pinyin: kua
+  brief: Memory that survives beyond a single session, the most flexible level of the memory dimension.
+  brief_zh: 存活期长于单次会话的记忆，是记忆维度的最灵活档位。
+  detail: Persistence creates a poisoning target that keeps influencing later behaviour, and accumulates
+    sensitive data that outlives the interaction that produced it.
+  detail_zh: 持久化既制造出持续影响后续行为的投毒目标，也累积出比产生它的交互活得更久的敏感数据。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Retrieval Capability
+  term_zh: 检索能力
+  pinyin: jian
+  brief: Read-only access to the external environment, the middle level of the action dimension between
+    responding and executing.
+  brief_zh: 对外部环境的只读访问，是动作维度中介于回复与执行之间的档位。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Risk Taxonomy
+  term_zh: 风险分类
+  pinyin: feng
+  brief: The component-organised catalogue of agent security risks, R1 to R7, onto which the design dimensions
+    map.
+  brief_zh: 按组件组织的智能体安全风险目录，从 R1 到 R7，设计维度映射到它之上。
+  detail: R1 heterogeneous untrusted interfaces, R2 wrong instruction following, R3 unconstrained/unsafe
+    data flow and R4 hallucination and model mistakes are the model-side risks; R5 private data leakage,
+    R6 unintended/unauthorized action and data corruption, and R7 resource drain and denial of service
+    are the consequence risks.
+  detail_zh: R1 异构的不可信接口、R2 错误遵循指令、R3 不受约束/不安全的数据流与 R4 幻觉与模型错误属于模型侧风险；R5 隐私数据泄露、R6 非预期/未授权动作与数据损坏、R7 资源耗尽与拒绝服务属于后果类风险。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: RSA-OAEP
+  term_zh: RSA-OAEP 加密
+  pinyin: jia
+  brief: RSA encryption with OAEP padding, used to wrap symmetric keys under a recipient's public key
+    in LastPass and Bitwarden.
+  brief_zh: 带 OAEP 填充的 RSA 加密，在 LastPass 与 Bitwarden 中用接收者公钥包裹对称密钥。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: shared folder key
+  term_zh: 共享文件夹密钥
+  pinyin: gong
+  brief: The 32-byte key k_shr that encrypts the items of a LastPass shared folder and is wrapped with
+    RSA-OAEP for each recipient.
+  brief_zh: 加密 LastPass 共享文件夹中各条目的 32 字节密钥 k_shr，对每个接收者用 RSA-OAEP 包裹。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Transient Session Memory
+  term_zh: 会话内临时记忆
+  pinyin: hui
+  brief: Memory that lasts only for the current session and is discarded when the session ends.
+  brief_zh: 仅在当前会话内留存、会话结束即被丢弃的记忆。
+  chapter: '3.2'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: payload string
+  term_zh: 载荷字符串
+  pinyin: zai
+  brief: The first bytes of a Dashlane transaction content, naming the KDF, its parameters, the cipher
+    and the cipher mode.
+  brief_zh: Dashlane 事务内容开头的若干字节，规定 KDF 及其参数、分组密码与工作模式。
+  chapter: '3.3'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: transaction key
+  term_zh: 事务密钥
+  pinyin: shi
+  brief: The key Dashlane derives from the master key and the transaction parameters to encrypt one transaction's
+    content.
+  brief_zh: Dashlane 由主密钥与事务参数派生的、用于加密单个事务内容的密钥。
+  detail: The salt is constant for all transactions, so every transaction sharing the same KDF and cipher
+    mode is encrypted under the same derived key.
+  detail_zh: 盐对所有事务都是固定的，因此 KDF 与密码模式相同的事务都用同一把派生密钥加密。
+  chapter: '3.3'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: transactional database
+  term_zh: 事务型数据库
+  pinyin: shi
+  brief: Dashlane's vault representation, in which each transaction creates, modifies or deletes one item.
+  brief_zh: Dashlane 保险库的表示形式，每个事务创建一个、修改一个或删除一个条目。
+  chapter: '3.3'
+  first_seen: Chapter 3
+  paper: 'SoK: Agentic AI'
+- term: Attack Vector
+  term_zh: 攻击向量
+  pinyin: gong
+  brief: A concrete route by which an attacker enters an agentic system and influences it, such as indirect
+    prompt injection or tool poisoning.
+  brief_zh: 攻击者进入并影响智能体系统的具体途径，如间接提示注入或工具投毒。
+  chapter: '4.1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: Direct prompt injection
+  term_zh: 直接提示注入
+  pinyin: zhi
+  brief: A malicious prompt sent straight to the agent by a user or user interface, instructing it to
+    act against its system prompt.
+  brief_zh: 用户或界面直接发给智能体的恶意提示词，指示它违背系统提示词行事。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: External adversary
+  term_zh: 外部对手
+  pinyin: wai
+  brief: An attacker with no access to the agent system who acts only by controlling resources the agent
+    may retrieve, such as public web pages.
+  brief_zh: 对智能体系统无访问权限，仅通过控制智能体可能检索的网页等资源施加影响。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: Indirect prompt injection
+  term_zh: 间接提示注入
+  pinyin: jian
+  brief: Instructions hidden in content the agent retrieves, such as a web page, document or email, which
+    the model then follows as commands.
+  brief_zh: 把指令藏在智能体检索到的内容（网页、文档、邮件等）中，诱导模型照做。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: Internal adversary
+  term_zh: 内部对手
+  pinyin: nei
+  brief: An attacker with access to agent components such as the model or memory, as developer or component
+    provider; the paper's hardest attack.
+  brief_zh: 以开发者或组件供应商身份访问模型、记忆等组件，论文称其为最难实现的攻击。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: key authentication
+  term_zh: 密钥认证
+  pinyin: ren
+  brief: Establishing that a public key delivered by the server really belongs to the party it claims
+    to represent.
+  brief_zh: 确认服务器下发的公钥确实属于它声称的那一方。
+  detail: The attacks in this chapter exist because Bitwarden and LastPass never do it; both take the
+    escrow public keys from the server on trust, which Table 1 records as "Lack of Key Auth".
+  detail_zh: 本章的攻击之所以成立，正是因为 Bitwarden 与 LastPass 从不做这件事：两者都无条件信任服务器下发的托管公钥，表 1 记为 "Lack of Key Auth"。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: Malicious data injection
+  term_zh: 恶意数据注入
+  pinyin: e
+  brief: Attacker-supplied data rather than instructions, such as a hallucinated package name, that harms
+    when a sensitive operation consumes it.
+  brief_zh: 投递数据而非指令，如被幻觉出的包名，在敏感操作中被使用时造成危害。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: Memory poisoning
+  term_zh: 记忆投毒
+  pinyin: ji
+  brief: Direct manipulation of the agent's persistent memory to inject content, alter behaviour or leak
+    data; the write survives across sessions.
+  brief_zh: 直接操纵智能体持久记忆以注入内容、改变行为或泄露数据，写入会跨会话存续。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: MITRE ATLAS
+  term_zh: MITRE ATLAS
+  pinyin: m
+  brief: A public knowledge base of adversary tactics and techniques against AI systems; Appendix A maps
+    the paper's attack vectors onto it.
+  brief_zh: 针对 AI 系统的对手战术与技术公开知识库，附录 A 把本文攻击向量映射到它。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: Model poisoning
+  term_zh: 模型投毒
+  pinyin: mo
+  brief: Hidden malicious behaviour embedded in the model itself by its provider or supply chain, so that
+    it acts against the user or leaks data.
+  brief_zh: 由模型供应商或供应链在模型内植入隐藏的恶意行为，使其执行未授权动作或泄露数据。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: Package hallucination
+  term_zh: 软件包幻觉
+  pinyin: ruan
+  brief: A model limitation in which code-generating LLMs invent package names; attackers register those
+    names to plant malicious packages.
+  brief_zh: 代码生成模型凭空编造包名的缺陷，攻击者抢注这些包名以植入恶意软件包。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: RAG poisoning
+  term_zh: 检索增强生成投毒
+  pinyin: jian
+  brief: Corrupting the knowledge a retrieval-augmented agent draws on, so that poisoned entries are retrieved
+    and acted on later.
+  brief_zh: 污染检索增强智能体所依赖的知识，使投毒条目被检索并影响后续行为。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: Threat Model
+  term_zh: 威胁模型
+  pinyin: wei
+  brief: A classification of who the attacker is and what they can reach, used to group attack vectors
+    by adversary capability.
+  brief_zh: 对攻击者身份及其可触及范围的分类，用于按对手能力归并攻击向量。
+  detail: 'This work uses three: external, user-level, and internal adversaries.'
+  detail_zh: 本工作使用三类：外部对手、用户级对手与内部对手。
+  chapter: '4.1'
+  first_seen: Chapter 1
+  paper: 'SoK: Agentic AI'
+- term: Tool poisoning
+  term_zh: 工具投毒
+  pinyin: gong
+  brief: A third-party tool whose name, description or implementation carries a malicious prompt or code,
+    loaded with the tool definition.
+  brief_zh: 第三方工具的名称、描述或实现中夹带恶意提示词或代码，随工具定义被加载。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: User-level adversary
+  term_zh: 用户级对手
+  pinyin: yong
+  brief: An attacker who reaches the agent directly as a malicious user, or a third party that poisons
+    an otherwise benign user's input.
+  brief_zh: 以恶意用户身份直接接触智能体，或作为第三方污染正常用户的输入。
+  chapter: '4.1'
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: account recovery ciphertext
+  term_zh: 账户恢复密文
+  pinyin: zhang
+  brief: The ciphertext c_rec the client sends when a user enrols in recovery, that is the user key encrypted
+    under the organisation public key.
+  brief_zh: 用户加入恢复时客户端发出的密文 c_rec，即用组织公钥加密的用户密钥。
+  detail: It sits on the server so that an administrator can hand the vault back after a forgotten master
+    password; both Bitwarden attacks in §4.1 make the client send it under a public key the adversary
+    controls.
+  detail_zh: 它存放在服务器上，以便管理员在用户忘记主密码后交还保险库；4.1 节的两个 Bitwarden 攻击都是让客户端把它用攻击者控制的公钥加密后发出。
+  chapter: 4.1.1
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: account recovery policy
+  term_zh: 账户恢复策略
+  pinyin: zhang
+  brief: The organisation-side setting that says whether members are enrolled in recovery, and whether
+    joining enrols them automatically.
+  brief_zh: 组织侧设置，决定成员是否加入恢复、以及加入组织时是否自动纳入。
+  detail: The client fetches it from the server without integrity protection, which is what lets a malicious
+    server turn auto-enrolment on for a user who never opted in.
+  detail_zh: 客户端从不带完整性保护的服务器取回该策略，恶意服务器因此能为从未选择加入的用户打开自动纳入。
+  chapter: 4.1.1
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: auto-enrolment
+  term_zh: 自动纳入
+  pinyin: zi
+  brief: Enrolling a user in account recovery automatically when they join an organisation, with no user
+    interaction.
+  brief_zh: 用户加入组织时无需任何交互即自动加入账户恢复。
+  detail: Distinguished from self-enrolment, the manual variant. Attack BW01 works by flipping this flag
+    on the server side.
+  detail_zh: 与需要手动操作的 self-enrolment 相对。攻击 BW01 就是在服务器侧把这个开关打开。
+  chapter: 4.1.1
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: key rotation
+  term_zh: 密钥轮换
+  pinyin: lun
+  brief: Replacing a user key with a freshly sampled one, optionally offered by Bitwarden when the master
+    password changes.
+  brief_zh: 把用户密钥换成新采样的密钥；Bitwarden 在用户修改主密码时可选提供。
+  detail: Rotation forces the client to regenerate the account recovery ciphertext, and the organisation
+    key it uses for that is fetched from the server, which is the opening for attack BW02.
+  detail_zh: 轮换迫使客户端重新生成账户恢复密文，而所用的组织公钥来自服务器，这就是攻击 BW02 的入口。
+  chapter: 4.1.1
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: organisation private key
+  term_zh: 组织私钥
+  pinyin: zu
+  brief: The secret half sk_org of a Bitwarden organisation's key pair, known to every member of that
+    organisation.
+  brief_zh: Bitwarden 组织密钥对中的私钥 sk_org，该组织每位成员都持有。
+  detail: Because every member knows it, compromising one user reveals sk_org for all of that user's organisations,
+    which is how attack BW01 spreads in a worm-like fashion.
+  detail_zh: 由于每位成员都持有它，攻陷一个用户即可获知该用户所属全部组织的 sk_org，BW01 正是借此以蠕虫式扩散。
+  chapter: 4.1.1
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: organisation public key
+  term_zh: 组织公钥
+  pinyin: zu
+  brief: The public key pk_org under which a Bitwarden client encrypts the user key when a member enrols
+    in account recovery.
+  brief_zh: Bitwarden 成员加入账户恢复时，客户端用来加密用户密钥的公钥 pk_org。
+  detail: The client obtains it from the server and does not authenticate it, so a malicious server substitutes
+    its own key and decrypts the recovery ciphertext.
+  detail_zh: 客户端从服务器取得它且不作认证，恶意服务器因此可以替换成自己的公钥并解出恢复密文。
+  chapter: 4.1.1
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: self-enrolment
+  term_zh: 手动纳入
+  pinyin: shou
+  brief: Enrolling in account recovery as a manual step that requires the user to act.
+  brief_zh: 需要用户主动操作的手动账户恢复加入方式。
+  detail: The alternative to auto-enrolment; a user who never takes this step should not be affected by
+    recovery at all.
+  detail_zh: 自动纳入之外的另一种方式；未做此操作的用户本不应受恢复机制影响。
+  chapter: 4.1.1
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: master password reset
+  term_zh: 主密码重置
+  pinyin: chong
+  brief: The LastPass enterprise feature that lets a super admin reset a team member's master password.
+  brief_zh: LastPass 企业版功能，允许超级管理员重置团队成员的主密码。
+  detail: The selected user's client encrypts its user key under each admin's RSA public key, and the
+    browser extension is the only client that supports this key exchange, which is the setting for attack
+    LP01.
+  detail_zh: 被选中用户的客户端会把用户密钥在各管理员的 RSA 公钥下加密；只有浏览器扩展支持这套密钥交换流程，这正是攻击 LP01 的场景。
+  chapter: 4.1.2
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: super admin
+  term_zh: 超级管理员
+  pinyin: chao
+  brief: A privileged LastPass team account that can reset the master password of other members.
+  brief_zh: LastPass 团队中的特权账户，可以重置其他成员的主密码。
+  detail: Each such account carries an RSA key pair (sk_adm, pk_adm); their public keys are what the client
+    fetches from the server at login.
+  detail_zh: 每个此类账户持有一对 RSA 密钥 (sk_adm, pk_adm)；客户端登录时取回的正是这些公钥。
+  chapter: 4.1.2
+  first_seen: Chapter 4
+  paper: 'SoK: Agentic AI'
+- term: associated data
+  term_zh: 关联数据
+  pinyin: guan
+  brief: Data that is authenticated along with a ciphertext but not encrypted, binding the ciphertext
+    to its context.
+  brief_zh: 与密文一起被认证、但本身不加密的数据，用来把密文绑定到它的上下文。
+  detail: 'Its absence is what makes item field swapping (BW05, LP02) possible: a field name is stored
+    as plaintext JSON key and never authenticated together with the ciphertext under it.'
+  detail_zh: 正因为它缺失，条目字段交换（BW05、LP02）才能成立：字段名作为明文 JSON 键存放，从不与它下面的密文一起认证。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Data Corruption
+  term_zh: 数据损坏
+  pinyin: shu
+  brief: Unauthorized modification of stored resources such as files or databases, one of the two integrity
+    failures grouped under R6.
+  brief_zh: 对文件、数据库等存储资源的未授权修改，R6 下的两类完整性问题之一。
+  detail: R6 also covers unintended and unauthorized actions, which make irreversible state changes such
+    as unauthorized purchases or arbitrary code execution. Memory poisoning can inject knowledge that
+    corrupts later behavior.
+  detail_zh: R6 同时涵盖非预期/未授权操作，例如未授权购买或任意代码执行；记忆投毒会污染后续行为。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Heterogeneous Untrusted Interfaces
+  term_zh: 异构不可信接口
+  pinyin: yi
+  brief: The external data sources, persistent memory stores and third-party tools of varying trust that
+    an agent exposes as attack entry points.
+  brief_zh: 智能体暴露的外部数据源、持久记忆与信任级别各异的第三方工具等攻击入口。
+  detail: Named R1. Every one of the six attack vectors V1-V6 enters the system through one of these interfaces,
+    which makes R1 the precondition for the other risks rather than an incident in itself.
+  detail_zh: 编号 R1。六个攻击向量 V1–V6 都经这些接口之一进入系统，因此 R1 更像其他风险的前提。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: icon URL item decryption
+  term_zh: 图标 URL 条目解密
+  pinyin: tu
+  brief: Leaking a decrypted item field by putting its ciphertext in the URL field the client uses to
+    fetch an icon.
+  brief_zh: 把字段密文放进客户端取图标用的 URL 字段，从而把解密后的内容泄漏出去。
+  detail: Attacks BW06 (Bitwarden, which sends the domain and top-level domain and requires a URL-shaped
+    plaintext) and LP03 (LastPass, which sends the stored URL itself with no plaintext conditions).
+  detail_zh: 即攻击 BW06（Bitwarden，只发送域名与顶级域，要求明文形如 URL）与 LP03（LastPass，直接发送存储的 URL，对明文没有条件）。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: item field swapping
+  term_zh: 条目字段交换
+  pinyin: tiao
+  brief: Moving a ciphertext from one field of an item to another, or between items, because nothing binds
+    it to its field.
+  brief_zh: 把密文从条目的一个字段搬到另一个字段或搬到别的条目，因为没有东西把它绑定到字段。
+  detail: Attacks BW05 and LP02. It is the base gadget for the icon URL decryption attacks, which need
+    a secret field moved into the URL field.
+  detail_zh: 即攻击 BW05 与 LP02，也是图标 URL 解密攻击的基础：后者需要把敏感字段的密文搬进 URL 字段。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: item-level vault encryption
+  term_zh: 条目级保险库加密
+  pinyin: tiao
+  brief: Storing and encrypting each vault item separately instead of encrypting the whole vault as one
+    object.
+  brief_zh: 把保险库中的每个条目分别存储、分别加密，而不是整体加密。
+  detail: It makes partial synchronisation cheap, because editing one item does not require re-encrypting
+    the vault, but it removes any cryptographic guarantee over the vault as a whole.
+  detail_zh: 它让局部同步变得廉价（改一个条目不必重新加密整个保险库），代价是保险库整体不再有任何密码学保证。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: KDF iteration count
+  term_zh: KDF 迭代次数
+  pinyin: die
+  brief: The parameter that sets how expensive a password-based key derivation is, and therefore how expensive
+    guessing is.
+  brief_zh: 决定基于口令的密钥派生有多昂贵的参数，也就是猜测一次口令的成本。
+  detail: Attacks BW07 and LP04 lower it because the settings are stored unencrypted and unauthenticated
+    on the server; the derived hash the client sends at login then costs almost nothing to check.
+  detail_zh: 攻击 BW07 与 LP04 之所以能降低它，是因为该设置以未加密、未认证的形式存放在服务器上；客户端登录时送出的哈希因此几乎不花代价就能被检验。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Private Data Leakage
+  term_zh: 私有数据泄露
+  pinyin: si
+  brief: Unauthorized access to user conversations, persistent memory, credentials or environment resources
+    through how those components interact.
+  brief_zh: 借助组件交互未授权获取用户对话、持久记忆、工具凭据或环境资源。
+  detail: Named R5, a confidentiality failure and the risk R3 most directly enables. Patterns include
+    sending data to attacker-controlled servers, leaking through automatically fetched URL parameters,
+    and abusing SSRF, XSS, path traversal or SQL injection.
+  detail_zh: 编号 R5，保密性失效，也是 R3 最直接促成的风险；模式包括自动 URL 访问与 SSRF 等漏洞滥用。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Prompt Stealing Attack
+  term_zh: 提示窃取攻击
+  pinyin: ti
+  brief: An attack that extracts system prompts, tool descriptions or configurations encoding proprietary
+    knowledge from a deployed model or agent.
+  brief_zh: 从已部署的模型或智能体中提取编码专有知识的系统提示、工具描述或配置。
+  detail: In agentic systems this targets the agent developer and tool providers rather than the end user.
+    Published work covers text-to-image generation models and real-world prompt services, both at USENIX
+    Security.
+  detail_zh: 在智能体系统中，受害方是开发者与工具提供方；已有工作覆盖文生图模型与现实提示词服务。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Resource Drain
+  term_zh: 资源耗尽
+  pinyin: zi
+  brief: Costly API calls, forced infinite loops or excessive memory use that make an agent and its external
+    systems unusable or unaffordable.
+  brief_zh: 昂贵 API 调用、被迫的无限循环或过度内存占用，使智能体及外部系统不可用或难以为继。
+  detail: Named R7, the availability risk. It is measured economically as much as operationally, since
+    the same autonomy that makes an agent useful lets an attacker spend someone else's budget.
+  detail_zh: 编号 R7，可用性风险，衡量方式偏经济而非仅偏运行。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Security Risk Taxonomy
+  term_zh: 安全风险分类法
+  pinyin: an
+  brief: The seven-item map (R1-R7) that keys each agent security risk to the component an attacker can
+    target.
+  brief_zh: 把七条智能体安全风险（R1–R7）对应到攻击者可瞄准组件的分类框架。
+  detail: The taxonomy is organized by components rather than by severity, so one incident usually exercises
+    several entries at once. R1 heterogeneous untrusted interfaces; R2 wrong instruction following; R3
+    unconstrained/unsafe data flow; R4 hallucination and model mistakes; R5 private data leakage; R6 unintended/unauthorized
+    action and data corruption; R7 resource drain and denial of service.
+  detail_zh: 分类法按组件而非严重性组织，因此一次事件通常同时触发多条风险。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Server-Side Request Forgery
+  term_zh: 服务端请求伪造
+  pinyin: fu
+  brief: A domain-specific vulnerability (SSRF) that agents can be manipulated into using to reach protected
+    internal resources.
+  brief_zh: 领域特定漏洞 SSRF，智能体可被操纵利用它触达受保护的内部资源。
+  detail: Listed alongside XSS, path traversal and SQL injection as an abuse pattern behind private data
+    leakage (R5), where the agent's automatic URL fetching turns into a request to an attacker-chosen
+    address.
+  detail_zh: 与 XSS、路径穿越、SQL 注入并列，是私有数据泄露（R5）的滥用模式之一。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Side-Channel Risk
+  term_zh: 侧信道风险
+  pinyin: ce
+  brief: Information leaked through observable agent behavior such as tool execution timing, API call
+    sequences or network traffic patterns.
+  brief_zh: 经工具执行耗时、API 调用序列或网络流量模式等可观察行为泄露的信息。
+  detail: No prior work is known to study such side-channel attacks in agentic systems, so the analysis
+    is deferred to future work and the exposure should be treated as open.
+  detail_zh: 目前尚无研究考察智能体系统中的这类侧信道攻击，相关分析留待后续工作。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: transaction replay
+  term_zh: 事务重放
+  pinyin: shi
+  brief: Duplicating, reordering or dropping Dashlane transactions, which the client cannot detect.
+  brief_zh: 复制、重排或删除 Dashlane 事务，而客户端无法察觉。
+  detail: Attack DL01. It works because the transaction key depends only on the transaction parameters,
+    not on the transaction itself, and it is the building block for the Dashlane downgrade attacks of
+    Section 4.4.2.
+  detail_zh: 即攻击 DL01。成因是事务密钥只取决于事务参数而非事务本身；它也是 4.4.2 节 Dashlane 降级攻击的基础。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Unconstrained Data Flow
+  term_zh: 无约束数据流
+  pinyin: wu
+  brief: Data moves freely from input at an untrusted interface to any output, because an LLM has no type
+    system or access control to constrain it.
+  brief_zh: 大模型缺少类型系统与访问控制，数据可从不可信输入自由流向任意输出。
+  detail: Named R3, damaging confidentiality and integrity. Its consequences are private data leakage
+    (R5), data corruption (R6) and resource drain (R7); the canonical example is an agent returning an
+    attacker-controlled URL that is then fetched automatically.
+  detail_zh: 编号 R3，损害保密性与完整性，后果是 R5、R6、R7；典型例子是被自动访问的攻击者控制 URL。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: URL checksum
+  term_zh: URL 校验和
+  pinyin: jiao
+  brief: A hash of an item's URL stored in another encrypted field so the client can detect a swapped
+    URL.
+  brief_zh: 把条目 URL 的哈希存进另一个加密字段，供客户端发现 URL 被调换。
+  detail: Deployed by Bitwarden in July 2024. Old items never receive it, and it is only checked when
+    the item has a per-item key, so attacks before July 2024 and Attack BW10 both defeat it.
+  detail_zh: Bitwarden 于 2024 年 7 月上线。旧条目不会补上它，且只有条目带条目密钥时才会校验，因此 2024 年 7 月之前的条目与攻击 BW10 都能绕过它。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: vault integrity
+  term_zh: 保险库完整性
+  pinyin: bao
+  brief: The guarantee that vault items and settings are the ones the user stored, in the same form and
+    arrangement.
+  brief_zh: 保证保险库中的条目与设置仍是用户存下的那一份，形式与顺序都未被改动。
+  detail: 'Encrypting each item separately with AE does not provide it: items and fields can still be
+    swapped, deleted, duplicated or merged, and cleartext metadata such as the KDF parameters can be edited.'
+  detail_zh: 逐条目使用 AE 并不能提供它：条目与字段仍可被调换、删除、复制或拼接，KDF 参数之类的明文元数据也能被改动。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Wrong Instruction Following
+  term_zh: 错误指令跟随
+  pinyin: cuo
+  brief: The agent obeys prompts injected by an attacker instead of the instructions intended by the benign
+    user or the system developer.
+  brief_zh: 智能体执行攻击者注入的提示，而非良性用户或开发者本来的指令。
+  detail: 'Named R2, an integrity failure. Its vectors are the prompt-injection family: V1 indirect prompt
+    injection, V4 direct prompt injection, and the instructions V6 memory poisoning plants.'
+  detail_zh: 编号 R2，属完整性失效。其向量为 V1 间接提示注入、V4 直接提示注入，以及 V6 记忆投毒植入的指令。
+  chapter: '4.2'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Consequence Risks
+  term_zh: 后果类风险
+  pinyin: hou
+  brief: R5, R6 and R7, whose severity comes from the Access Sensitivity, Action and User Interface dimensions
+    rather than from whether they occur.
+  brief_zh: R5、R6、R7，其严重程度由访问敏感度、操作与用户界面决定，而非是否发生。
+  detail: Private data leakage, unintended or unauthorized action and data corruption, and resource drain.
+    Moving the Action dimension from response-only to execution converts information disclosure into environment
+    corruption.
+  detail_zh: 私有数据泄露、非预期/未授权操作与数据损坏、资源耗尽；操作维度扩展到执行会把信息泄露变成环境破坏。
+  chapter: '4.3'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Key Transparency
+  term_zh: 密钥透明
+  pinyin: mi
+  brief: 'The talk''s proposed fix for sharing: a public, auditable record of public keys, so that a substituted
+    key can be detected.'
+  brief_zh: 讲者为共享提出的对策：为公钥建立可审计的公开记录，以便发现被替换的公钥。
+  detail: The talk recommends key transparency for public key authentication in sharing, alongside HSMs
+    for key escrow and key separation for partial vault synchronisation.
+  detail_zh: 讲者建议把密钥透明用于共享中的公钥认证，并把 HSM 用于密钥托管、把密钥分离用于部分保险库同步。
+  chapter: '4.3'
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: Model Risks
+  term_zh: 模型风险
+  pinyin: mo
+  brief: The paper groups R2, R3 and R4 as model risks, the ones the Workflow design dimension primarily
+    drives.
+  brief_zh: 论文把 R2、R3、R4 归为一组模型风险，主要由工作流设计维度驱动。
+  detail: 'Wrong instruction following, unconstrained data flow and hallucination. They sit in the middle
+    of the cascade: an expanded attack surface lets attacker-controlled data reach and exploit them, and
+    they in turn amplify the consequence risks.'
+  detail_zh: 包括错误指令跟随、无约束数据流与幻觉；它们处于级联中段，既承接攻击面扩大，也放大后果类风险。
+  chapter: '4.3'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Risk Amplification
+  term_zh: 风险放大
+  pinyin: feng
+  brief: The cascading process in which an expanded attack surface feeds model risks, which in turn amplify
+    the consequence risks.
+  brief_zh: 攻击面扩大助推模型风险，模型风险再放大后果类风险的级联过程。
+  detail: R1 increases the entry points for attacker-controlled data, which reach and exploit R2, R3 and
+    R4; those then amplify R5, R6 and R7. The cascade is why component-level defenses are insufficient
+    and system-level defense-in-depth is required.
+  detail_zh: R1 使恶意输入触达 R2–R4，再放大 R5–R7；因此必须在系统层面纵深防御。
+  chapter: '4.3'
+  first_seen: Chapter 5
+  paper: 'SoK: Agentic AI'
+- term: Sharing Key Overwrite
+  term_zh: 共享密钥覆写
+  pinyin: gong
+  brief: 'Attacks LP07 and DL02: a malicious server substitutes the recipient''s RSA public key, so the
+    share key is encrypted to a key it controls.'
+  brief_zh: 攻击 LP07 与 DL02：恶意服务器在共享时替换接收方公钥，使共享密钥被加密到它掌握的密钥之下。
+  chapter: '4.3'
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: Organisation Injection
+  term_zh: 组织注入
+  pinyin: zu
+  brief: Attack BW08, in which anyone can add a user to a new organisation by encrypting the organisation
+    key under that user's public key.
+  brief_zh: 攻击 BW08：任何人只要把组织密钥加密到某用户公钥之下，就能把该用户加入组织。
+  chapter: 4.3.1
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: Organisation Overwrite
+  term_zh: 组织覆写
+  pinyin: zu
+  brief: Attack BW09, in which the server swaps the encrypted organisation key and data of a freshly created
+    organisation for values it controls.
+  brief_zh: 攻击 BW09：服务器把新建组织的加密组织密钥与数据替换成自己控制的值。
+  chapter: 4.3.1
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: Organisation RSA Keypair
+  term_zh: 组织 RSA 密钥对
+  pinyin: zu
+  brief: The recovery keypair (pk_org, sk_org) that Bitwarden creates with an organisation; its private
+    key is encrypted under k_org to form c_skOrg.
+  brief_zh: Bitwarden 随组织创建的恢复密钥对，其私钥用 k_org 加密成 c_skOrg。
+  chapter: 4.3.1
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: Organisation Symmetric Key
+  term_zh: 组织对称密钥
+  pinyin: zu
+  brief: The 64-byte key k_org with which Bitwarden encrypts items shared in an organisation, stored encrypted
+    under each member's RSA public key.
+  brief_zh: Bitwarden 加密组织内共享条目所用的 64 字节密钥 k_org，以各成员的 RSA 公钥加密后保存。
+  detail: A client decides that a user is an organisation member exactly when it can obtain k_org, and
+    nothing binds the vault to the organisation list the server sends.
+  detail_zh: 客户端能否取得 k_org 正是它判断成员身份的依据；保险库与服务器下发的组织列表之间没有任何密码学绑定。
+  chapter: 4.3.1
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: Disable Per-Item Keys
+  term_zh: 禁用条目级密钥
+  pinyin: jin
+  brief: Attack BW10, described in the paper's full version, which downgrades the key hierarchy so that
+    items are encrypted under the user key again.
+  brief_zh: 攻击 BW10（详见论文完整版）：降级密钥层级，使条目重新直接用用户密钥加密。
+  chapter: 4.4.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: Downgrade to Legacy
+  term_zh: 降级到旧格式
+  pinyin: jiang
+  brief: Attack BW12, which forges a user key with no MAC half so that Bitwarden writes in CBC-only mode
+    and a padding oracle becomes possible.
+  brief_zh: 攻击 BW12：伪造出没有 MAC 半段的用户密钥，使 Bitwarden 改用纯 CBC 模式，从而打开填充预言。
+  chapter: 4.4.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: Encryption Type Attribute
+  term_zh: 加密类型属性
+  pinyin: jia
+  brief: 'The unprotected prefix on each Bitwarden ciphertext: type 0 for authenticated encryption, type
+    1 for plain AES-CBC.'
+  brief_zh: Bitwarden 密文前不受保护的标记：type 0 表示认证加密，type 1 表示纯 AES-CBC。
+  detail: Because the attribute is prepended and not integrity-protected, a malicious server can mark
+    a ciphertext so that the client takes the weaker AES-CBC path.
+  detail_zh: 该属性前置在密文之前且不受完整性保护，因此恶意服务器可以篡改它，把客户端引向较弱的 AES-CBC 路径。
+  chapter: 4.4.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: Heisenberg Attack
+  term_zh: 海森堡攻击
+  pinyin: hai
+  brief: The talk's name for the Bitwarden pair BW11 and BW12, because each direction costs the adversary
+    one of integrity or confidentiality.
+  brief_zh: 讲者对 Bitwarden 的 BW11 与 BW12 的合称：两个方向各以放弃完整性或机密性之一为代价。
+  chapter: 4.4.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: Known Plaintext Oracle Gadget
+  term_zh: 已知明文预言器
+  pinyin: yi
+  brief: Attack BWb1, which uses Bitwarden's keypair-generation path to obtain AES-CBC encryptions of
+    known plaintexts under the unknown master key.
+  brief_zh: 攻击 BWb1：借 Bitwarden 生成密钥对的迁移路径，在未知主密钥下取得已知明文的 AES-CBC 密文。
+  chapter: 4.4.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: User Key Overwriting
+  term_zh: 用户密钥覆写
+  pinyin: yong
+  brief: Attack BW11, which forges a user key ciphertext whose encryption half the adversary knows, forfeiting
+    the confidentiality of later items.
+  brief_zh: 攻击 BW11：伪造出加密半段为己所知的用户密钥密文，使此后新加密的条目失去机密性。
+  chapter: 4.4.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: CBC-Only Downgrade
+  term_zh: 纯 CBC 降级
+  pinyin: chun
+  brief: Attack DL05, in which forged Dashlane settings make the client encrypt every later transaction
+    in CBC-only mode, open to the padding oracle.
+  brief_zh: 攻击 DL05：伪造的 Dashlane 设置让客户端此后一律以纯 CBC 加密事务，暴露于填充预言之下。
+  chapter: 4.4.2
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: Item Injection
+  term_zh: 条目注入
+  pinyin: tiao
+  brief: Attack DL03, which uses the Dashlane encrypt oracle DLb2 to forge arbitrary transactions, including
+    Setting transactions.
+  brief_zh: 攻击 DL03：利用 Dashlane 的加密预言 DLb2 伪造任意事务，包括 Setting 事务。
+  chapter: 4.4.2
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: Payload Format
+  term_zh: payload 格式
+  pinyin: ge
+  brief: The leading string of a Dashlane transaction that names its key derivation function, cipher and
+    mode; KWC3 is legacy, Flexible is current.
+  brief_zh: Dashlane 事务开头标明其密钥派生函数、密码算法与工作模式；KWC3 为旧格式，Flexible 为当前格式。
+  chapter: 4.4.2
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: contextual security
+  term_zh: 上下文安全
+  pinyin: shang
+  brief: An agent-specific goal that an agent's contexts stay aligned with the user's intended task, avoiding
+    instruction override and drift.
+  brief_zh: 智能体特有目标：上下文与用户意图任务保持一致，避免指令覆盖与上下文漂移。
+  chapter: '5.1'
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: input guardrail
+  term_zh: 输入护栏
+  pinyin: shu
+  brief: A first-line defense that validates inputs before they reach the agent, filtering malicious instructions
+    and data from untrusted sources.
+  brief_zh: 在输入到达智能体之前校验、过滤恶意指令与数据的第一道防线。
+  chapter: 5.2.1
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: output guardrail
+  term_zh: 输出护栏
+  pinyin: shu
+  brief: A check on an agent's outward behavior such as user responses and tool usages, validating alignment
+    and safe tool use.
+  brief_zh: 检查智能体对外行为（回复、工具调用）的机制，校验任务对齐与工具使用安全。
+  chapter: 5.2.2
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: declassification
+  term_zh: 安全标签降级
+  pinyin: an
+  brief: The principled relaxation of a security label when safe, needed to keep label-creep-prone agents
+    usable without losing security.
+  brief_zh: 在安全时原则性地放宽安全标签，使易发生标签蔓延的智能体保持可用而不失安全。
+  chapter: 5.2.3
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: information flow control
+  term_zh: 信息流控制
+  pinyin: xin
+  brief: A technique that labels each datum, propagates the labels through the system, and blocks flows
+    that violate the label constraints.
+  brief_zh: 为数据分配信息流格中的安全标签并传播，阻断违反格约束的流动。
+  chapter: 5.2.3
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: information flow lattice
+  term_zh: 信息流格
+  pinyin: xin
+  brief: A predefined partial order of security labels from which information flow control draws each
+    datum's label and allowed propagation.
+  brief_zh: 预定义的安全标签偏序结构，信息流控制据此分配标签并判定允许的传播。
+  chapter: 5.2.3
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: label creep
+  term_zh: 标签蔓延
+  pinyin: biao
+  brief: Conservative label propagation so restrictive that the agent becomes unusable unless safe declassification
+    rules exist.
+  brief_zh: 保守标签传播的失效：标签过于严格使智能体不可用，除非有安全的降级规则。
+  chapter: 5.2.3
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: over-tainting
+  term_zh: 过度污点标记
+  pinyin: guo
+  brief: Marking more data as untrusted than necessary, which variable-based taint tracking mitigates
+    by replacing data with trackable variables.
+  brief_zh: 把超出必要范围的数据标为不可信；基于变量的方法以可追踪变量缓解该问题。
+  chapter: 5.2.3
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: security label
+  term_zh: 安全标签
+  pinyin: an
+  brief: The per-datum marker in information flow control that records its trust or secrecy level and
+    governs which flows are permitted.
+  brief_zh: 信息流控制中标记单份数据可信或保密级别的标签，决定哪些流动被允许。
+  chapter: 5.2.3
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: taint tracking
+  term_zh: 污点追踪
+  pinyin: wu
+  brief: A technique that marks untrusted data and follows its propagation, so data influenced by untrusted
+    sources can be constrained.
+  brief_zh: 标记不可信数据并追踪其传播，从而约束受不可信来源影响的数据。
+  chapter: 5.2.3
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: log granularity
+  term_zh: 日志粒度
+  pinyin: ri
+  brief: How coarse or fine an agent's activity log is; finer logs detect more but cost more storage,
+    computation and privacy.
+  brief_zh: 智能体活动日志的粗细程度：越细越易检出异常，但存储、计算与隐私代价越高。
+  chapter: 5.2.4
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: monitoring
+  term_zh: 监控
+  pinyin: jian
+  brief: System-wide visibility over inputs, outputs and intermediate states, used to surface distributed
+    threats that no single action reveals.
+  brief_zh: 对输入、输出与中间状态提供全局可见性，揭示单个动作看不出的分布式威胁。
+  chapter: 5.2.4
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: decision fatigue
+  term_zh: 决策疲劳
+  pinyin: jue
+  brief: The erosion of judgment caused by frequent validation prompts, which leads users to approve risky
+    actions or reject benign ones.
+  brief_zh: 频繁验证提示导致的判断力下降，使使用者盲目批准高风险动作或误拒良性动作。
+  chapter: 5.2.5
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: human-in-the-loop validation
+  term_zh: 人在回路验证
+  pinyin: ren
+  brief: A defense in which the agent requests user approval before high-risk actions, giving the user
+    control over security decisions.
+  brief_zh: 智能体在高风险动作前请求用户批准，由用户掌控安全决策的防护机制。
+  chapter: 5.2.5
+  first_seen: Chapter 6
+  paper: 'SoK: Agentic AI'
+- term: containerisation
+  term_zh: 容器化
+  pinyin: rong
+  brief: An existing operating-system isolation mechanism that agent privilege separation can reuse to
+    sandbox the external environment.
+  brief_zh: 既有的操作系统隔离机制，智能体的权限分离可复用它来沙箱化外部环境。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: horizontal privilege separation
+  term_zh: 横向权限分离
+  pinyin: heng
+  brief: Privilege separation between parallel sub-agents at disjoint access scopes, as when IsolateGPT
+    spawns one agent per mobile application.
+  brief_zh: 让并行子智能体在互不相交的访问范围上运行的权限分离，如 IsolateGPT 为每个应用派生一个智能体。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: memory separation
+  term_zh: 内存分离
+  pinyin: nei
+  brief: Creating separate memory spaces so that a lower-privilege component cannot read the sensitive
+    data held by another component.
+  brief_zh: 创建彼此独立的内存空间，使低权限组件读不到其他组件持有的敏感数据。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: planner–parser separation
+  term_zh: 规划器—解析器分离
+  pinyin: gui
+  brief: Splitting an agent's LLM use into tool call planning and tool result parsing, so that external
+    data cannot steer planning decisions.
+  brief_zh: 把智能体对 LLM 的使用拆成工具调用规划与工具结果解析，使外部数据无法左右规划决策。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: privilege separation
+  term_zh: 权限分离
+  pinyin: quan
+  brief: Assigning different privilege levels to components and isolating them, so an attacker who controls
+    one cannot reach the others.
+  brief_zh: 给不同组件分配不同权限并加以隔离，使控制一个组件的攻击者无法触及其余组件。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: sandboxing
+  term_zh: 沙箱化
+  pinyin: sha
+  brief: Confining a tool or environment to a restricted execution copy, as PFI does when it switches
+    tools between normal and sandbox versions.
+  brief_zh: 把工具或环境限制在受限的执行副本中，PFI 即按数据信任级别在普通版与沙箱版之间切换工具。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: utility loss
+  term_zh: 效用损失
+  pinyin: xiao
+  brief: The capability an agent gives up when privilege separation splits its functionality across isolated
+    components that must then communicate.
+  brief_zh: 权限分离把功能拆到必须相互通信的隔离组件之后，智能体所损失的能力。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+  detail: The paper treats reducing utility loss while retaining the security guarantee as an open challenge
+    for practical deployment.
+  detail_zh: 论文把"在保住安全保证的同时降低可用性损失"列为实际部署的开放挑战。
+- term: vertical privilege separation
+  term_zh: 纵向权限分离
+  pinyin: zong
+  brief: Hierarchical privilege separation with a trusted planner above a lower-privilege parser, so tool
+    results never flow directly into planning.
+  brief_zh: 分层式的权限分离，可信规划器位于低权限解析器之上，工具结果不会直接流入规划。
+  chapter: 5.3.1
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: formal verification
+  term_zh: 形式化验证
+  pinyin: xing
+  brief: Proving a property of a system from a formal model of it; for agents the model must capture stochastic
+    behaviour to stay meaningful.
+  brief_zh: 依据系统的形式模型证明某项性质；用于智能体时模型须刻画随机行为才有意义。
+  chapter: 5.3.2
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: pushdown automaton
+  term_zh: 下推自动机
+  pinyin: xia
+  brief: The machine Formal-LLM uses to encode developer-defined plan constraints such as required tool
+    orderings, restricting plan generation.
+  brief_zh: Formal-LLM 用以编码工具调用顺序等规划约束、限制规划生成的机器模型。
+  chapter: 5.3.2
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: rule circuit
+  term_zh: 规则电路
+  pinyin: gui
+  brief: ShieldAgent's declarative encoding of external policy documents into circuits over action trajectories,
+    used to enforce policy compliance.
+  brief_zh: ShieldAgent 把外部政策文档声明式编码为作用于动作轨迹的电路，用以强制政策合规。
+  chapter: 5.3.2
+  first_seen: Chapter 7
+  paper: 'SoK: Agentic AI'
+- term: identity and access management
+  term_zh: 身份与访问管理
+  pinyin: shen
+  brief: Covering identity management, access control and credential management, to ensure authenticated
+    entities and authorised access.
+  brief_zh: 涵盖身份管理、访问控制与凭证管理的总体领域，确保实体通过认证、访问获得授权。
+  chapter: '5.4'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Interoperable Identity
+  term_zh: 可互操作的身份
+  pinyin: hu
+  brief: The missing capability for agent identities to be issued, delegated and revoked across platforms
+    under common taxonomies, so that agent actions stay auditable and accountable.
+  brief_zh: 智能体身份在各平台间按共同分类体系签发、委托与撤销的能力，使动作可审计、可问责。
+  detail: Without standard frameworks, platforms implement incompatible credential issuance, delegation
+    and revocation flows that are hard to audit or federate.
+  detail_zh: 缺少标准框架时，各平台的凭证签发、委托与撤销流程互不兼容，难以审计与联邦。
+  chapter: 5.4.1
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: proxy delegation
+  term_zh: 代理委托
+  pinyin: dai
+  brief: Letting an agent act for a user through an intermediary service or token, one of the three delegation
+    models the paper lists.
+  brief_zh: 让智能体经由中间服务或令牌代表用户行事，是论文所列三种委托模型之一。
+  chapter: 5.4.1
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: single-sign-on
+  term_zh: 单点登录
+  pinyin: dan
+  brief: One authentication and authorisation point across many services; Okta and Composio use it for
+    agent access and credential provisioning.
+  brief_zh: 在多个服务间统一认证与授权的机制；Okta 与 Composio 用它管理智能体访问与凭证供给。
+  chapter: 5.4.1
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: task-level identity
+  term_zh: 任务级身份
+  pinyin: ren
+  brief: A short-lived identity created for a specific task or session, giving dynamic least-privilege
+    operation rather than a standing identity.
+  brief_zh: 为特定任务或会话创建的短生命周期身份，实现动态最小权限而非长期身份。
+  chapter: 5.4.1
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: capability-based security
+  term_zh: 基于能力的安全
+  pinyin: ji
+  brief: An access control mechanism in which holding an unforgeable capability token is what grants access,
+    an alternative to RBAC and ABAC.
+  brief_zh: 持有不可伪造的能力令牌即获得访问权的访问控制机制，与 RBAC、ABAC 并列。
+  chapter: 5.4.2
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Coordinated Credential Orchestration
+  term_zh: 协同凭证编排
+  pinyin: xie
+  brief: The open need for standardised, centralised handling of agent secrets across a stack, including
+    multiple agents, instead of ad hoc storage of keys in unencrypted environment variables.
+  brief_zh: 在整个智能体栈（含多智能体）中标准化、统一地管理密钥的需求，取代把密钥存为未加密环境变量的临时做法。
+  chapter: 5.4.3
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: credential provisioning
+  term_zh: 凭证供给
+  pinyin: pin
+  brief: How an agent obtains credentials, through single-sign-on or OAuth 2.0 authenticated delegation
+    from the user.
+  brief_zh: 智能体取得凭证的方式，即经由单点登录或基于 OAuth 2.0 的认证委托。
+  chapter: 5.4.3
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: dynamic credential management
+  term_zh: 动态凭证管理
+  pinyin: dong
+  brief: Using time-limited tokens that expire automatically, shrinking the exposure window at the cost
+    of complex renewal and interruptions.
+  brief_zh: 使用到期自动失效的限时令牌，缩小暴露窗口，代价是续期复杂、可能中断服务。
+  chapter: 5.4.3
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: trusted execution environment
+  term_zh: 可信执行环境
+  pinyin: ke
+  brief: A hardware-based isolated region in which confidential computing keeps agent credentials beyond
+    the reach of the surrounding software.
+  brief_zh: 基于硬件的隔离区域，机密计算在其中管理智能体凭证，使其免受外围软件触及。
+  chapter: 5.4.3
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: shadowing attack
+  term_zh: 遮蔽攻击
+  pinyin: zhe
+  brief: An attack in which a malicious tool result overrides other tool results, which instruction hierarchy
+    fine-tuning does not address.
+  brief_zh: 恶意工具结果覆盖其他工具结果的攻击，指令层级微调无法应对。
+  chapter: '5.5'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: complete mediation
+  term_zh: 完全中介
+  pinyin: wan
+  brief: The design principle that every access to a sensitive resource must be checked and validated,
+    via monitoring and access control.
+  brief_zh: 设计原则：对敏感资源的每次访问都须经检查与验证，由监控与访问控制落实。
+  chapter: '5.6'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+  detail: Reflected in monitoring that observes agent execution and in access control that verifies each
+    interaction with a protected resource.
+  detail_zh: 体现在监控智能体执行过程的机制，以及校验每次受保护资源交互的访问控制中。
+- term: Economy of Mechanisms
+  term_zh: 机制经济性
+  pinyin: ji
+  brief: A security principle, named among further principles that also apply to agents, favouring the
+    smallest set of mechanisms that achieves the protection, to keep the design auditable and maintainable.
+  brief_zh: 论文点名的另一条适用原则：以最少机制达成防护，使设计可审计、可维护。
+  chapter: '5.6'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: Fail-Safe Defaults
+  term_zh: 故障安全默认
+  pinyin: gu
+  brief: A security principle, named among further principles that also apply to agents, in which the
+    default state on failure is to deny access rather than grant it.
+  brief_zh: 论文点名的另一条适用原则：失效时默认拒绝而非放行。
+  chapter: '5.6'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: Principle of Least Privilege
+  term_zh: 最小权限原则
+  pinyin: zui
+  brief: The design principle that an agent should operate with the minimal permissions and access rights
+    its task requires, so that a compromise cannot reach beyond that task.
+  brief_zh: 智能体只应持有任务所需的最小权限与访问权，使被攻陷的影响不超出该任务。
+  detail: Implemented through privilege separation techniques that isolate agent components and restrict
+    tool access.
+  detail_zh: 通过隔离智能体组件、限制工具访问的权限分离技术实现。
+  chapter: '5.6'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: Authenticated Encryption (AE)
+  term_zh: 认证加密
+  pinyin: ren
+  brief: Encryption that also proves the ciphertext was not modified, so tampering is detected instead
+    of silently decrypting.
+  brief_zh: 同时证明密文未被改动的加密，使篡改会被发现而非静默解密。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Authenticated Encryption with Associated Data (AEAD)
+  term_zh: 关联数据认证加密
+  pinyin: guan
+  brief: Authenticated encryption that also covers associated data left in the clear, such as PBKDF parameters.
+  brief_zh: 认证加密的扩展，还保护留在明文的关联数据（如 PBKDF 参数）。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Certificate Authority (CA)
+  term_zh: 证书颁发机构
+  pinyin: zheng
+  brief: A party that signs public keys; for password managers it must sit outside whoever controls the
+    vault server.
+  brief_zh: 为公钥签名的机构；在密码管理器场景中必须不隶属于保险库服务器的控制方。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Ciphertext Authentication
+  term_zh: 密文认证
+  pinyin: mi
+  brief: Proving who produced a ciphertext, which public-key encryption alone cannot do, since anyone
+    can encrypt.
+  brief_zh: 证明密文由谁生成；公钥加密本身做不到，因为任何人都能加密。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Data-Origin Authentication
+  term_zh: 数据来源认证
+  pinyin: shu
+  brief: A guarantee that a message came from a named sender, which no public-key encryption scheme can
+    provide by itself.
+  brief_zh: 保证消息确实来自具名发送者；任何公钥加密方案本身都无法提供。
+  detail: Because any party can encrypt under a public key, no PKE scheme can offer it; the paper recommends
+    signcryption to bind ciphertexts to their senders.
+  detail_zh: 由于任何一方都能用公钥加密，任何 PKE 方案都无法提供该保证；论文建议用签密把密文与发送者绑定。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: forced migration
+  term_zh: 强制迁移
+  pinyin: qiang
+  brief: Shipping a client whose only job is to move a vault to the new format, so a breaking change reaches
+    every user.
+  brief_zh: 只负责把保险库迁移到新格式的客户端，使破坏性变更覆盖所有用户。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Hardware Security Module (HSM)
+  term_zh: 硬件安全模块
+  pinyin: ying
+  brief: Tamper-resistant hardware that can hold recovery keys and give some assurance the server is behaving
+    honestly.
+  brief_zh: 防篡改硬件，可保管恢复密钥，并对服务器是否诚实运行提供一定保证。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Key Separation (KS)
+  term_zh: 密钥分离
+  pinyin: mi
+  brief: Deriving a distinct key per item and per field, so one key can never stand in for another.
+  brief_zh: 为每个条目、每个字段派生独立密钥，使一个密钥无法冒充另一个。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Merkle Tree
+  term_zh: 默克尔树
+  pinyin: mo
+  brief: A hash structure that authenticates the whole vault, used to block selective deletion attacks.
+  brief_zh: 认证整个保险库的哈希结构，用于阻止选择性删除攻击。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Public-Key Authentication (PKA)
+  term_zh: 公钥认证
+  pinyin: gong
+  brief: Binding a public key to its owner, by certificates, trust-on-first-use or a verified key directory.
+  brief_zh: 把公钥与其所有者绑定，可通过证书、首次使用信任或已验证密钥目录实现。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Trust On First Use (TOFU)
+  term_zh: 首次使用信任
+  pinyin: shou
+  brief: Remembering a public key the first time it is seen and flagging any later change, so substitution
+    is confined to first use.
+  brief_zh: 首次见到公钥时记住它，此后变化即告警，把密钥替换限制在首次使用。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: Verified Key Directory (VKD)
+  term_zh: 已验证密钥目录
+  pinyin: yi
+  brief: A directory that cannot stop a server from publishing a wrong public key but makes the tampering
+    evident to users.
+  brief_zh: 一种目录，虽不能阻止服务器发布错误公钥，却能让篡改对用户可见。
+  chapter: '8'
+  first_seen: Chapter 8
+  paper: 'SoK: Agentic AI'
+- term: cryptographic agility
+  term_zh: 密码敏捷性
+  pinyin: mi
+  brief: The practice of making sharp but clean breaking changes so past cryptographic attacks cannot
+    resurface.
+  brief_zh: 通过剧烈但干净的破坏性变更，避免历史密码学攻击卷土重来的做法。
+  detail: The paper contrasts it with the backwards compatibility that preserved early-2000s cryptography
+    in password managers, and points to TLS's evolution as the model to follow.
+  detail_zh: 论文把它与密码管理器中保留 2000 年代初密码学的向后兼容相对照，并以 TLS 的演化为应效仿的样板。
+  chapter: '9'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: design anti-pattern
+  term_zh: 设计反模式
+  pinyin: she
+  brief: A recurring flawed design habit that produces vulnerabilities across independent products.
+  brief_zh: 在不同产品中反复出现、导致漏洞的坏设计习惯。
+  detail: The paper names four families — a burdensome legacy of old cryptography, deceptive simplicity,
+    integrity broken by incremental synchronisation, and unsafe sharing of public keys.
+  detail_zh: 论文点出四类：旧密码学留下的历史包袱、被低估的复杂度、增量同步破坏完整性，以及不安全的公钥共享。
+  chapter: '9'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: disclosure window
+  term_zh: 披露窗口
+  pinyin: pi
+  brief: The agreed period, here at least 90 days, during which an issue is kept from the public.
+  brief_zh: 双方约定的、期间不对外公开问题的期限，这里是至少 90 天。
+  detail: Disclosures began on 27 January 2025 for Bitwarden, 4 June 2025 for LastPass and 29 August 2025
+    for Dashlane, with a common public date of 14 February 2026; the LastPass clock was reset after its
+    first email was lost.
+  detail_zh: 披露始于 Bitwarden 2025 年 1 月 27 日、LastPass 2025 年 6 月 4 日、Dashlane 2025 年 8 月 29 日，共同公开日期为 2026
+    年 2 月 14 日；LastPass 因首封邮件丢失而重置了计时。
+  chapter: '9'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: hardware security module
+  term_zh: 硬件安全模块
+  pinyin: ying
+  brief: Dedicated hardware that can hold keys and run operations that the server operator cannot tamper
+    with.
+  brief_zh: 专门硬件，用于保管密钥并执行服务运营方无法篡改的操作。
+  detail: The paper proposes implementing part of key escrow on HSMs, as Signal, WhatsApp and Apple's
+    Advanced Data Protection do for recovery and backups, so the server offers some guarantee of honest
+    behaviour.
+  detail_zh: 论文建议把部分密钥托管放到 HSM 上，如同 Signal、WhatsApp 与 Apple 高级数据保护在恢复与备份中所做，使服务器对自身诚实提供一定保障。
+  chapter: '9'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: Trust-On-First-Use
+  term_zh: 首次使用信任
+  pinyin: shou
+  brief: A scheme that accepts a public key the first time it is seen and alerts the user if it later
+    changes.
+  brief_zh: 首次见到公钥时予以接受、日后变化则告警的方案。
+  detail: Together with PKIs and Verified Key Directories it is one of the mitigations the paper proposes
+    for the key-substitution attacks, since some form of public-key verification cannot be avoided.
+  detail_zh: 它与 PKI、验证密钥目录同属论文为公钥替换类攻击提出的缓解措施，因为某种形式的公钥验证无法回避。
+  chapter: '9'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'
+- term: Verified Key Directory
+  term_zh: 验证密钥目录
+  pinyin: yan
+  brief: A directory that makes a provider's mis-association of public keys evident to users.
+  brief_zh: 让服务商错误关联公钥的行为对用户可见的目录机制。
+  detail: Explored in secure messaging, it would not stop a malicious server from binding the wrong public
+    key to a user, but it would alert users when their provider misbehaves.
+  detail_zh: 它在安全通信领域被探索：虽不能阻止恶意服务器把错误公钥绑到用户，但能在服务商作恶时提醒用户。
+  chapter: '9'
+  first_seen: Chapter 9
+  paper: 'SoK: Agentic AI'

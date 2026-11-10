@@ -1,0 +1,832 @@
+[
+ {
+  "id": "term-account-recovery",
+  "term": "account recovery",
+  "brief": "A feature that lets a user (or an administrator) regain access after forgetting the master password."
+ },
+ {
+  "id": "term-agentic-ai-system",
+  "term": "Agentic AI System",
+  "brief": "A system that combines large language models with traditional software components so it can act autonomously and use tools."
+ },
+ {
+  "id": "term-authenticated-encryption",
+  "term": "authenticated encryption",
+  "brief": "An encryption mode that also proves the ciphertext was not altered, unlike plain AES-CBC."
+ },
+ {
+  "id": "term-client-side-encryption",
+  "term": "client-side encryption",
+  "brief": "Encrypting data on the user's own device before it is sent to the server."
+ },
+ {
+  "id": "term-component-hardening",
+  "term": "Component Hardening",
+  "brief": "Defense that strengthens an individual agent component, such as the model, memory, or a tool, against the attacks that target it."
+ },
+ {
+  "id": "term-end-to-end-encryption",
+  "term": "end-to-end encryption",
+  "brief": "A design in which only the endpoints hold the keys, so the server handles ciphertext it cannot read."
+ },
+ {
+  "id": "term-key-substitution",
+  "term": "key substitution",
+  "brief": "An attack that swaps a victim's public key for the attacker's, so later traffic is encrypted to the attacker."
+ },
+ {
+  "id": "term-key-wrapping",
+  "term": "key wrapping",
+  "brief": "Encrypting one key under another, so the wrapped key can be stored or transported in the clear."
+ },
+ {
+  "id": "term-prompt-injection",
+  "term": "Prompt Injection",
+  "brief": "An attack in which attacker-supplied content is crafted to make an agent follow malicious instructions instead of the intended ones."
+ },
+ {
+  "id": "term-runtime-protection",
+  "term": "Runtime Protection",
+  "brief": "Defense mechanisms that enforce security during agent execution, detecting real-time threats and behaviors as the agent acts."
+ },
+ {
+  "id": "term-secure-by-design",
+  "term": "Secure by Design",
+  "brief": "Defense that builds security into an agent's structure and design choices rather than adding it at run time."
+ },
+ {
+  "id": "term-self-hosting",
+  "term": "self-hosting",
+  "brief": "Running the server component of a product on your own infrastructure instead of the vendor's."
+ },
+ {
+  "id": "term-vault-key",
+  "term": "vault key",
+  "brief": "The key that actually encrypts a vault; it is itself protected by a key derived from the master password."
+ },
+ {
+  "id": "term-ciphertext-integrity",
+  "term": "ciphertext integrity",
+  "brief": "The property that an adversary cannot alter stored or transmitted ciphertext undetectably."
+ },
+ {
+  "id": "term-coordinated-vulnerability-disclosure",
+  "term": "coordinated vulnerability disclosure",
+  "brief": "Reporting flaws privately to a vendor and agreeing on a publication date before going public."
+ },
+ {
+  "id": "term-defense-in-depth",
+  "term": "Defense in Depth",
+  "brief": "A principle of layering multiple independent defenses so that no single failure of one protection lets an attack succeed."
+ },
+ {
+  "id": "term-iteration-count",
+  "term": "iteration count",
+  "brief": "How many times a key-derivation function repeats, which sets the cost of guessing a password."
+ },
+ {
+  "id": "term-oblivious-client-operations",
+  "term": "oblivious client operations",
+  "brief": "The goal that a client performs its work without revealing what it is accessing to the server."
+ },
+ {
+  "id": "term-vault-indistinguishability",
+  "term": "vault indistinguishability",
+  "brief": "The goal that an adversary cannot even tell vaults apart, beyond their plaintext contents."
+ },
+ {
+  "id": "term-action-space",
+  "term": "Action Space",
+  "brief": "The set of operations an agent can perform through its tools, spanning three types — read, write, and execute."
+ },
+ {
+  "id": "term-aes-cbc-hmac",
+  "term": "AES-CBC-HMAC",
+  "brief": "Encrypt-then-MAC with AES-CBC and an HMAC over the ciphertext; Bitwarden's construction, dropped to bare AES-CBC when no MAC key is present."
+ },
+ {
+  "id": "term-ai-agent",
+  "term": "AI Agent",
+  "brief": "A hybrid software system combining traditional software components with neural components, which takes a user task and acts on it."
+ },
+ {
+  "id": "term-extended-master-key",
+  "term": "extended master key",
+  "brief": "In Bitwarden, the 64-byte key k_em formed by concatenating the HKDF-Expand \"enc\" and \"mac\" outputs of the master key."
+ },
+ {
+  "id": "term-model-context-protocol-mcp",
+  "term": "Model Context Protocol (MCP)",
+  "brief": "A standardized protocol through which tools can be implemented and made available to an agent."
+ },
+ {
+  "id": "term-organisation-key",
+  "term": "organisation key",
+  "brief": "The 64-byte symmetric key k_org that encrypts the items of a Bitwarden organisation; membership means being able to recover it."
+ },
+ {
+  "id": "term-per-item-key",
+  "term": "per-item key",
+  "brief": "A key sampled for one vault item and itself encrypted under the user key, used by Bitwarden for items created since version 2024.2.0."
+ },
+ {
+  "id": "term-retrieval-tool",
+  "term": "Retrieval Tool",
+  "brief": "A tool giving an agent read-only access to the external environment, such as searching or reading a file, rather than modifying it."
+ },
+ {
+  "id": "term-user-key",
+  "term": "user key",
+  "brief": "The 64-byte symmetric key that protects every item in a Bitwarden or LastPass vault, stored on the server only in encrypted form."
+ },
+ {
+  "id": "term-access-sensitivity",
+  "term": "Access Sensitivity",
+  "brief": "How much sensitive data an agent may reach, from none, to known sensitive data sources, to arbitrary sensitive data."
+ },
+ {
+  "id": "term-agent-design-dimensions",
+  "term": "Agent Design Dimensions",
+  "brief": "Seven axes — input trust, access sensitivity, workflow, action, memory, tool, user interface — characterizing an agent's design flexibility."
+ },
+ {
+  "id": "term-attack-surface",
+  "term": "Attack Surface",
+  "brief": "The set of interfaces through which an attacker can reach a system; on agents, external data, memory and third-party tools widen it."
+ },
+ {
+  "id": "term-design-dimension",
+  "term": "Design Dimension",
+  "brief": "One of seven axes along which an agent's design varies, each a continuum of flexibility from least to most flexible."
+ },
+ {
+  "id": "term-design-flexibility",
+  "term": "Design Flexibility",
+  "brief": "How far an agent's design sits toward the flexible end of each dimension; greater flexibility generally amplifies security risk."
+ },
+ {
+  "id": "term-developer-defined-workflow",
+  "term": "Developer-Defined Workflow",
+  "brief": "A fixed action sequence written in advance by the agent's developers, the moderately flexible level of the workflow dimension."
+ },
+ {
+  "id": "term-execution-action",
+  "term": "Execution Action",
+  "brief": "An operation that modifies the environment rather than only reading it, the most flexible level of the action dimension."
+ },
+ {
+  "id": "term-flexibility-spectrum",
+  "term": "Flexibility Spectrum",
+  "brief": "The range of settings a design dimension takes, illustrated by three representative levels: least, moderately and most flexible."
+ },
+ {
+  "id": "term-input-trust",
+  "term": "Input Trust",
+  "brief": "How trustworthy the external data sources an agent relies on are; it runs from no external data to arbitrary, potentially untrusted sources."
+ },
+ {
+  "id": "term-llm-defined-workflow",
+  "term": "LLM-Defined Workflow",
+  "brief": "An action sequence composed at run time by the model rather than fixed in advance, the most flexible level of the workflow dimension."
+ },
+ {
+  "id": "term-orthogonal-dimensions",
+  "term": "Orthogonal Dimensions",
+  "brief": "The property that the design dimensions can coexist in one agent, which may hold different levels on different dimensions."
+ },
+ {
+  "id": "term-persistent-cross-session-memory",
+  "term": "Persistent Cross-Session Memory",
+  "brief": "Memory that survives beyond a single session, the most flexible level of the memory dimension."
+ },
+ {
+  "id": "term-retrieval-capability",
+  "term": "Retrieval Capability",
+  "brief": "Read-only access to the external environment, the middle level of the action dimension between responding and executing."
+ },
+ {
+  "id": "term-risk-taxonomy",
+  "term": "Risk Taxonomy",
+  "brief": "The component-organised catalogue of agent security risks, R1 to R7, onto which the design dimensions map."
+ },
+ {
+  "id": "term-rsa-oaep",
+  "term": "RSA-OAEP",
+  "brief": "RSA encryption with OAEP padding, used to wrap symmetric keys under a recipient's public key in LastPass and Bitwarden."
+ },
+ {
+  "id": "term-shared-folder-key",
+  "term": "shared folder key",
+  "brief": "The 32-byte key k_shr that encrypts the items of a LastPass shared folder and is wrapped with RSA-OAEP for each recipient."
+ },
+ {
+  "id": "term-transient-session-memory",
+  "term": "Transient Session Memory",
+  "brief": "Memory that lasts only for the current session and is discarded when the session ends."
+ },
+ {
+  "id": "term-payload-string",
+  "term": "payload string",
+  "brief": "The first bytes of a Dashlane transaction content, naming the KDF, its parameters, the cipher and the cipher mode."
+ },
+ {
+  "id": "term-transaction-key",
+  "term": "transaction key",
+  "brief": "The key Dashlane derives from the master key and the transaction parameters to encrypt one transaction's content."
+ },
+ {
+  "id": "term-transactional-database",
+  "term": "transactional database",
+  "brief": "Dashlane's vault representation, in which each transaction creates, modifies or deletes one item."
+ },
+ {
+  "id": "term-attack-vector",
+  "term": "Attack Vector",
+  "brief": "A concrete route by which an attacker enters an agentic system and influences it, such as indirect prompt injection or tool poisoning."
+ },
+ {
+  "id": "term-direct-prompt-injection",
+  "term": "Direct prompt injection",
+  "brief": "A malicious prompt sent straight to the agent by a user or user interface, instructing it to act against its system prompt."
+ },
+ {
+  "id": "term-external-adversary",
+  "term": "External adversary",
+  "brief": "An attacker with no access to the agent system who acts only by controlling resources the agent may retrieve, such as public web pages."
+ },
+ {
+  "id": "term-indirect-prompt-injection",
+  "term": "Indirect prompt injection",
+  "brief": "Instructions hidden in content the agent retrieves, such as a web page, document or email, which the model then follows as commands."
+ },
+ {
+  "id": "term-internal-adversary",
+  "term": "Internal adversary",
+  "brief": "An attacker with access to agent components such as the model or memory, as developer or component provider; the paper's hardest attack."
+ },
+ {
+  "id": "term-key-authentication",
+  "term": "key authentication",
+  "brief": "Establishing that a public key delivered by the server really belongs to the party it claims to represent."
+ },
+ {
+  "id": "term-malicious-data-injection",
+  "term": "Malicious data injection",
+  "brief": "Attacker-supplied data rather than instructions, such as a hallucinated package name, that harms when a sensitive operation consumes it."
+ },
+ {
+  "id": "term-memory-poisoning",
+  "term": "Memory poisoning",
+  "brief": "Direct manipulation of the agent's persistent memory to inject content, alter behaviour or leak data; the write survives across sessions."
+ },
+ {
+  "id": "term-mitre-atlas",
+  "term": "MITRE ATLAS",
+  "brief": "A public knowledge base of adversary tactics and techniques against AI systems; Appendix A maps the paper's attack vectors onto it."
+ },
+ {
+  "id": "term-model-poisoning",
+  "term": "Model poisoning",
+  "brief": "Hidden malicious behaviour embedded in the model itself by its provider or supply chain, so that it acts against the user or leaks data."
+ },
+ {
+  "id": "term-package-hallucination",
+  "term": "Package hallucination",
+  "brief": "A model limitation in which code-generating LLMs invent package names; attackers register those names to plant malicious packages."
+ },
+ {
+  "id": "term-rag-poisoning",
+  "term": "RAG poisoning",
+  "brief": "Corrupting the knowledge a retrieval-augmented agent draws on, so that poisoned entries are retrieved and acted on later."
+ },
+ {
+  "id": "term-threat-model",
+  "term": "Threat Model",
+  "brief": "A classification of who the attacker is and what they can reach, used to group attack vectors by adversary capability."
+ },
+ {
+  "id": "term-tool-poisoning",
+  "term": "Tool poisoning",
+  "brief": "A third-party tool whose name, description or implementation carries a malicious prompt or code, loaded with the tool definition."
+ },
+ {
+  "id": "term-user-level-adversary",
+  "term": "User-level adversary",
+  "brief": "An attacker who reaches the agent directly as a malicious user, or a third party that poisons an otherwise benign user's input."
+ },
+ {
+  "id": "term-account-recovery-ciphertext",
+  "term": "account recovery ciphertext",
+  "brief": "The ciphertext c_rec the client sends when a user enrols in recovery, that is the user key encrypted under the organisation public key."
+ },
+ {
+  "id": "term-account-recovery-policy",
+  "term": "account recovery policy",
+  "brief": "The organisation-side setting that says whether members are enrolled in recovery, and whether joining enrols them automatically."
+ },
+ {
+  "id": "term-auto-enrolment",
+  "term": "auto-enrolment",
+  "brief": "Enrolling a user in account recovery automatically when they join an organisation, with no user interaction."
+ },
+ {
+  "id": "term-key-rotation",
+  "term": "key rotation",
+  "brief": "Replacing a user key with a freshly sampled one, optionally offered by Bitwarden when the master password changes."
+ },
+ {
+  "id": "term-organisation-private-key",
+  "term": "organisation private key",
+  "brief": "The secret half sk_org of a Bitwarden organisation's key pair, known to every member of that organisation."
+ },
+ {
+  "id": "term-organisation-public-key",
+  "term": "organisation public key",
+  "brief": "The public key pk_org under which a Bitwarden client encrypts the user key when a member enrols in account recovery."
+ },
+ {
+  "id": "term-self-enrolment",
+  "term": "self-enrolment",
+  "brief": "Enrolling in account recovery as a manual step that requires the user to act."
+ },
+ {
+  "id": "term-master-password-reset",
+  "term": "master password reset",
+  "brief": "The LastPass enterprise feature that lets a super admin reset a team member's master password."
+ },
+ {
+  "id": "term-super-admin",
+  "term": "super admin",
+  "brief": "A privileged LastPass team account that can reset the master password of other members."
+ },
+ {
+  "id": "term-associated-data",
+  "term": "associated data",
+  "brief": "Data that is authenticated along with a ciphertext but not encrypted, binding the ciphertext to its context."
+ },
+ {
+  "id": "term-data-corruption",
+  "term": "Data Corruption",
+  "brief": "Unauthorized modification of stored resources such as files or databases, one of the two integrity failures grouped under R6."
+ },
+ {
+  "id": "term-heterogeneous-untrusted-interfaces",
+  "term": "Heterogeneous Untrusted Interfaces",
+  "brief": "The external data sources, persistent memory stores and third-party tools of varying trust that an agent exposes as attack entry points."
+ },
+ {
+  "id": "term-icon-url-item-decryption",
+  "term": "icon URL item decryption",
+  "brief": "Leaking a decrypted item field by putting its ciphertext in the URL field the client uses to fetch an icon."
+ },
+ {
+  "id": "term-item-field-swapping",
+  "term": "item field swapping",
+  "brief": "Moving a ciphertext from one field of an item to another, or between items, because nothing binds it to its field."
+ },
+ {
+  "id": "term-item-level-vault-encryption",
+  "term": "item-level vault encryption",
+  "brief": "Storing and encrypting each vault item separately instead of encrypting the whole vault as one object."
+ },
+ {
+  "id": "term-kdf-iteration-count",
+  "term": "KDF iteration count",
+  "brief": "The parameter that sets how expensive a password-based key derivation is, and therefore how expensive guessing is."
+ },
+ {
+  "id": "term-private-data-leakage",
+  "term": "Private Data Leakage",
+  "brief": "Unauthorized access to user conversations, persistent memory, credentials or environment resources through how those components interact."
+ },
+ {
+  "id": "term-prompt-stealing-attack",
+  "term": "Prompt Stealing Attack",
+  "brief": "An attack that extracts system prompts, tool descriptions or configurations encoding proprietary knowledge from a deployed model or agent."
+ },
+ {
+  "id": "term-resource-drain",
+  "term": "Resource Drain",
+  "brief": "Costly API calls, forced infinite loops or excessive memory use that make an agent and its external systems unusable or unaffordable."
+ },
+ {
+  "id": "term-security-risk-taxonomy",
+  "term": "Security Risk Taxonomy",
+  "brief": "The seven-item map (R1-R7) that keys each agent security risk to the component an attacker can target."
+ },
+ {
+  "id": "term-server-side-request-forgery",
+  "term": "Server-Side Request Forgery",
+  "brief": "A domain-specific vulnerability (SSRF) that agents can be manipulated into using to reach protected internal resources."
+ },
+ {
+  "id": "term-side-channel-risk",
+  "term": "Side-Channel Risk",
+  "brief": "Information leaked through observable agent behavior such as tool execution timing, API call sequences or network traffic patterns."
+ },
+ {
+  "id": "term-transaction-replay",
+  "term": "transaction replay",
+  "brief": "Duplicating, reordering or dropping Dashlane transactions, which the client cannot detect."
+ },
+ {
+  "id": "term-unconstrained-data-flow",
+  "term": "Unconstrained Data Flow",
+  "brief": "Data moves freely from input at an untrusted interface to any output, because an LLM has no type system or access control to constrain it."
+ },
+ {
+  "id": "term-url-checksum",
+  "term": "URL checksum",
+  "brief": "A hash of an item's URL stored in another encrypted field so the client can detect a swapped URL."
+ },
+ {
+  "id": "term-vault-integrity",
+  "term": "vault integrity",
+  "brief": "The guarantee that vault items and settings are the ones the user stored, in the same form and arrangement."
+ },
+ {
+  "id": "term-wrong-instruction-following",
+  "term": "Wrong Instruction Following",
+  "brief": "The agent obeys prompts injected by an attacker instead of the instructions intended by the benign user or the system developer."
+ },
+ {
+  "id": "term-consequence-risks",
+  "term": "Consequence Risks",
+  "brief": "R5, R6 and R7, whose severity comes from the Access Sensitivity, Action and User Interface dimensions rather than from whether they occur."
+ },
+ {
+  "id": "term-key-transparency",
+  "term": "Key Transparency",
+  "brief": "The talk's proposed fix for sharing: a public, auditable record of public keys, so that a substituted key can be detected."
+ },
+ {
+  "id": "term-model-risks",
+  "term": "Model Risks",
+  "brief": "The paper groups R2, R3 and R4 as model risks, the ones the Workflow design dimension primarily drives."
+ },
+ {
+  "id": "term-risk-amplification",
+  "term": "Risk Amplification",
+  "brief": "The cascading process in which an expanded attack surface feeds model risks, which in turn amplify the consequence risks."
+ },
+ {
+  "id": "term-sharing-key-overwrite",
+  "term": "Sharing Key Overwrite",
+  "brief": "Attacks LP07 and DL02: a malicious server substitutes the recipient's RSA public key, so the share key is encrypted to a key it controls."
+ },
+ {
+  "id": "term-organisation-injection",
+  "term": "Organisation Injection",
+  "brief": "Attack BW08, in which anyone can add a user to a new organisation by encrypting the organisation key under that user's public key."
+ },
+ {
+  "id": "term-organisation-overwrite",
+  "term": "Organisation Overwrite",
+  "brief": "Attack BW09, in which the server swaps the encrypted organisation key and data of a freshly created organisation for values it controls."
+ },
+ {
+  "id": "term-organisation-rsa-keypair",
+  "term": "Organisation RSA Keypair",
+  "brief": "The recovery keypair (pk_org, sk_org) that Bitwarden creates with an organisation; its private key is encrypted under k_org to form c_skOrg."
+ },
+ {
+  "id": "term-organisation-symmetric-key",
+  "term": "Organisation Symmetric Key",
+  "brief": "The 64-byte key k_org with which Bitwarden encrypts items shared in an organisation, stored encrypted under each member's RSA public key."
+ },
+ {
+  "id": "term-disable-per-item-keys",
+  "term": "Disable Per-Item Keys",
+  "brief": "Attack BW10, described in the paper's full version, which downgrades the key hierarchy so that items are encrypted under the user key again."
+ },
+ {
+  "id": "term-downgrade-to-legacy",
+  "term": "Downgrade to Legacy",
+  "brief": "Attack BW12, which forges a user key with no MAC half so that Bitwarden writes in CBC-only mode and a padding oracle becomes possible."
+ },
+ {
+  "id": "term-encryption-type-attribute",
+  "term": "Encryption Type Attribute",
+  "brief": "The unprotected prefix on each Bitwarden ciphertext: type 0 for authenticated encryption, type 1 for plain AES-CBC."
+ },
+ {
+  "id": "term-heisenberg-attack",
+  "term": "Heisenberg Attack",
+  "brief": "The talk's name for the Bitwarden pair BW11 and BW12, because each direction costs the adversary one of integrity or confidentiality."
+ },
+ {
+  "id": "term-known-plaintext-oracle-gadget",
+  "term": "Known Plaintext Oracle Gadget",
+  "brief": "Attack BWb1, which uses Bitwarden's keypair-generation path to obtain AES-CBC encryptions of known plaintexts under the unknown master key."
+ },
+ {
+  "id": "term-user-key-overwriting",
+  "term": "User Key Overwriting",
+  "brief": "Attack BW11, which forges a user key ciphertext whose encryption half the adversary knows, forfeiting the confidentiality of later items."
+ },
+ {
+  "id": "term-cbc-only-downgrade",
+  "term": "CBC-Only Downgrade",
+  "brief": "Attack DL05, in which forged Dashlane settings make the client encrypt every later transaction in CBC-only mode, open to the padding oracle."
+ },
+ {
+  "id": "term-item-injection",
+  "term": "Item Injection",
+  "brief": "Attack DL03, which uses the Dashlane encrypt oracle DLb2 to forge arbitrary transactions, including Setting transactions."
+ },
+ {
+  "id": "term-payload-format",
+  "term": "Payload Format",
+  "brief": "The leading string of a Dashlane transaction that names its key derivation function, cipher and mode; KWC3 is legacy, Flexible is current."
+ },
+ {
+  "id": "term-contextual-security",
+  "term": "contextual security",
+  "brief": "An agent-specific goal that an agent's contexts stay aligned with the user's intended task, avoiding instruction override and drift."
+ },
+ {
+  "id": "term-input-guardrail",
+  "term": "input guardrail",
+  "brief": "A first-line defense that validates inputs before they reach the agent, filtering malicious instructions and data from untrusted sources."
+ },
+ {
+  "id": "term-output-guardrail",
+  "term": "output guardrail",
+  "brief": "A check on an agent's outward behavior such as user responses and tool usages, validating alignment and safe tool use."
+ },
+ {
+  "id": "term-declassification",
+  "term": "declassification",
+  "brief": "The principled relaxation of a security label when safe, needed to keep label-creep-prone agents usable without losing security."
+ },
+ {
+  "id": "term-information-flow-control",
+  "term": "information flow control",
+  "brief": "A technique that labels each datum, propagates the labels through the system, and blocks flows that violate the label constraints."
+ },
+ {
+  "id": "term-information-flow-lattice",
+  "term": "information flow lattice",
+  "brief": "A predefined partial order of security labels from which information flow control draws each datum's label and allowed propagation."
+ },
+ {
+  "id": "term-label-creep",
+  "term": "label creep",
+  "brief": "Conservative label propagation so restrictive that the agent becomes unusable unless safe declassification rules exist."
+ },
+ {
+  "id": "term-over-tainting",
+  "term": "over-tainting",
+  "brief": "Marking more data as untrusted than necessary, which variable-based taint tracking mitigates by replacing data with trackable variables."
+ },
+ {
+  "id": "term-security-label",
+  "term": "security label",
+  "brief": "The per-datum marker in information flow control that records its trust or secrecy level and governs which flows are permitted."
+ },
+ {
+  "id": "term-taint-tracking",
+  "term": "taint tracking",
+  "brief": "A technique that marks untrusted data and follows its propagation, so data influenced by untrusted sources can be constrained."
+ },
+ {
+  "id": "term-log-granularity",
+  "term": "log granularity",
+  "brief": "How coarse or fine an agent's activity log is; finer logs detect more but cost more storage, computation and privacy."
+ },
+ {
+  "id": "term-monitoring",
+  "term": "monitoring",
+  "brief": "System-wide visibility over inputs, outputs and intermediate states, used to surface distributed threats that no single action reveals."
+ },
+ {
+  "id": "term-decision-fatigue",
+  "term": "decision fatigue",
+  "brief": "The erosion of judgment caused by frequent validation prompts, which leads users to approve risky actions or reject benign ones."
+ },
+ {
+  "id": "term-human-in-the-loop-validation",
+  "term": "human-in-the-loop validation",
+  "brief": "A defense in which the agent requests user approval before high-risk actions, giving the user control over security decisions."
+ },
+ {
+  "id": "term-containerisation",
+  "term": "containerisation",
+  "brief": "An existing operating-system isolation mechanism that agent privilege separation can reuse to sandbox the external environment."
+ },
+ {
+  "id": "term-horizontal-privilege-separation",
+  "term": "horizontal privilege separation",
+  "brief": "Privilege separation between parallel sub-agents at disjoint access scopes, as when IsolateGPT spawns one agent per mobile application."
+ },
+ {
+  "id": "term-memory-separation",
+  "term": "memory separation",
+  "brief": "Creating separate memory spaces so that a lower-privilege component cannot read the sensitive data held by another component."
+ },
+ {
+  "id": "term-planner-parser-separation",
+  "term": "planner–parser separation",
+  "brief": "Splitting an agent's LLM use into tool call planning and tool result parsing, so that external data cannot steer planning decisions."
+ },
+ {
+  "id": "term-privilege-separation",
+  "term": "privilege separation",
+  "brief": "Assigning different privilege levels to components and isolating them, so an attacker who controls one cannot reach the others."
+ },
+ {
+  "id": "term-sandboxing",
+  "term": "sandboxing",
+  "brief": "Confining a tool or environment to a restricted execution copy, as PFI does when it switches tools between normal and sandbox versions."
+ },
+ {
+  "id": "term-utility-loss",
+  "term": "utility loss",
+  "brief": "The capability an agent gives up when privilege separation splits its functionality across isolated components that must then communicate."
+ },
+ {
+  "id": "term-vertical-privilege-separation",
+  "term": "vertical privilege separation",
+  "brief": "Hierarchical privilege separation with a trusted planner above a lower-privilege parser, so tool results never flow directly into planning."
+ },
+ {
+  "id": "term-formal-verification",
+  "term": "formal verification",
+  "brief": "Proving a property of a system from a formal model of it; for agents the model must capture stochastic behaviour to stay meaningful."
+ },
+ {
+  "id": "term-pushdown-automaton",
+  "term": "pushdown automaton",
+  "brief": "The machine Formal-LLM uses to encode developer-defined plan constraints such as required tool orderings, restricting plan generation."
+ },
+ {
+  "id": "term-rule-circuit",
+  "term": "rule circuit",
+  "brief": "ShieldAgent's declarative encoding of external policy documents into circuits over action trajectories, used to enforce policy compliance."
+ },
+ {
+  "id": "term-identity-and-access-management",
+  "term": "identity and access management",
+  "brief": "Covering identity management, access control and credential management, to ensure authenticated entities and authorised access."
+ },
+ {
+  "id": "term-interoperable-identity",
+  "term": "Interoperable Identity",
+  "brief": "The missing capability for agent identities to be issued, delegated and revoked across platforms under common taxonomies, so that agent actions stay auditable and accountable."
+ },
+ {
+  "id": "term-proxy-delegation",
+  "term": "proxy delegation",
+  "brief": "Letting an agent act for a user through an intermediary service or token, one of the three delegation models the paper lists."
+ },
+ {
+  "id": "term-single-sign-on",
+  "term": "single-sign-on",
+  "brief": "One authentication and authorisation point across many services; Okta and Composio use it for agent access and credential provisioning."
+ },
+ {
+  "id": "term-task-level-identity",
+  "term": "task-level identity",
+  "brief": "A short-lived identity created for a specific task or session, giving dynamic least-privilege operation rather than a standing identity."
+ },
+ {
+  "id": "term-capability-based-security",
+  "term": "capability-based security",
+  "brief": "An access control mechanism in which holding an unforgeable capability token is what grants access, an alternative to RBAC and ABAC."
+ },
+ {
+  "id": "term-coordinated-credential-orchestration",
+  "term": "Coordinated Credential Orchestration",
+  "brief": "The open need for standardised, centralised handling of agent secrets across a stack, including multiple agents, instead of ad hoc storage of keys in unencrypted environment variables."
+ },
+ {
+  "id": "term-credential-provisioning",
+  "term": "credential provisioning",
+  "brief": "How an agent obtains credentials, through single-sign-on or OAuth 2.0 authenticated delegation from the user."
+ },
+ {
+  "id": "term-dynamic-credential-management",
+  "term": "dynamic credential management",
+  "brief": "Using time-limited tokens that expire automatically, shrinking the exposure window at the cost of complex renewal and interruptions."
+ },
+ {
+  "id": "term-trusted-execution-environment",
+  "term": "trusted execution environment",
+  "brief": "A hardware-based isolated region in which confidential computing keeps agent credentials beyond the reach of the surrounding software."
+ },
+ {
+  "id": "term-shadowing-attack",
+  "term": "shadowing attack",
+  "brief": "An attack in which a malicious tool result overrides other tool results, which instruction hierarchy fine-tuning does not address."
+ },
+ {
+  "id": "term-complete-mediation",
+  "term": "complete mediation",
+  "brief": "The design principle that every access to a sensitive resource must be checked and validated, via monitoring and access control."
+ },
+ {
+  "id": "term-economy-of-mechanisms",
+  "term": "Economy of Mechanisms",
+  "brief": "A security principle, named among further principles that also apply to agents, favouring the smallest set of mechanisms that achieves the protection, to keep the design auditable and maintainable."
+ },
+ {
+  "id": "term-fail-safe-defaults",
+  "term": "Fail-Safe Defaults",
+  "brief": "A security principle, named among further principles that also apply to agents, in which the default state on failure is to deny access rather than grant it."
+ },
+ {
+  "id": "term-principle-of-least-privilege",
+  "term": "Principle of Least Privilege",
+  "brief": "The design principle that an agent should operate with the minimal permissions and access rights its task requires, so that a compromise cannot reach beyond that task."
+ },
+ {
+  "id": "term-authenticated-encryption-ae",
+  "term": "Authenticated Encryption (AE)",
+  "brief": "Encryption that also proves the ciphertext was not modified, so tampering is detected instead of silently decrypting."
+ },
+ {
+  "id": "term-authenticated-encryption-with-associated-data-aead",
+  "term": "Authenticated Encryption with Associated Data (AEAD)",
+  "brief": "Authenticated encryption that also covers associated data left in the clear, such as PBKDF parameters."
+ },
+ {
+  "id": "term-certificate-authority-ca",
+  "term": "Certificate Authority (CA)",
+  "brief": "A party that signs public keys; for password managers it must sit outside whoever controls the vault server."
+ },
+ {
+  "id": "term-ciphertext-authentication",
+  "term": "Ciphertext Authentication",
+  "brief": "Proving who produced a ciphertext, which public-key encryption alone cannot do, since anyone can encrypt."
+ },
+ {
+  "id": "term-data-origin-authentication",
+  "term": "Data-Origin Authentication",
+  "brief": "A guarantee that a message came from a named sender, which no public-key encryption scheme can provide by itself."
+ },
+ {
+  "id": "term-forced-migration",
+  "term": "forced migration",
+  "brief": "Shipping a client whose only job is to move a vault to the new format, so a breaking change reaches every user."
+ },
+ {
+  "id": "term-hardware-security-module-hsm",
+  "term": "Hardware Security Module (HSM)",
+  "brief": "Tamper-resistant hardware that can hold recovery keys and give some assurance the server is behaving honestly."
+ },
+ {
+  "id": "term-key-separation-ks",
+  "term": "Key Separation (KS)",
+  "brief": "Deriving a distinct key per item and per field, so one key can never stand in for another."
+ },
+ {
+  "id": "term-merkle-tree",
+  "term": "Merkle Tree",
+  "brief": "A hash structure that authenticates the whole vault, used to block selective deletion attacks."
+ },
+ {
+  "id": "term-public-key-authentication-pka",
+  "term": "Public-Key Authentication (PKA)",
+  "brief": "Binding a public key to its owner, by certificates, trust-on-first-use or a verified key directory."
+ },
+ {
+  "id": "term-trust-on-first-use-tofu",
+  "term": "Trust On First Use (TOFU)",
+  "brief": "Remembering a public key the first time it is seen and flagging any later change, so substitution is confined to first use."
+ },
+ {
+  "id": "term-verified-key-directory-vkd",
+  "term": "Verified Key Directory (VKD)",
+  "brief": "A directory that cannot stop a server from publishing a wrong public key but makes the tampering evident to users."
+ },
+ {
+  "id": "term-cryptographic-agility",
+  "term": "cryptographic agility",
+  "brief": "The practice of making sharp but clean breaking changes so past cryptographic attacks cannot resurface."
+ },
+ {
+  "id": "term-design-anti-pattern",
+  "term": "design anti-pattern",
+  "brief": "A recurring flawed design habit that produces vulnerabilities across independent products."
+ },
+ {
+  "id": "term-disclosure-window",
+  "term": "disclosure window",
+  "brief": "The agreed period, here at least 90 days, during which an issue is kept from the public."
+ },
+ {
+  "id": "term-hardware-security-module",
+  "term": "hardware security module",
+  "brief": "Dedicated hardware that can hold keys and run operations that the server operator cannot tamper with."
+ },
+ {
+  "id": "term-trust-on-first-use",
+  "term": "Trust-On-First-Use",
+  "brief": "A scheme that accepts a public key the first time it is seen and alerts the user if it later changes."
+ },
+ {
+  "id": "term-verified-key-directory",
+  "term": "Verified Key Directory",
+  "brief": "A directory that makes a provider's mis-association of public keys evident to users."
+ }
+]

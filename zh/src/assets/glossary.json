@@ -1,0 +1,832 @@
+[
+ {
+  "id": "term-account-recovery",
+  "term": "账户恢复",
+  "brief": "让用户（或管理员）在忘记主密码后重新取回访问权的功能。"
+ },
+ {
+  "id": "term-agentic-ai-system",
+  "term": "智能体 AI 系统",
+  "brief": "把大语言模型与传统软件组件组合在一起、可自主行动并调用工具的系统。"
+ },
+ {
+  "id": "term-authenticated-encryption",
+  "term": "认证加密",
+  "brief": "同时能证明密文未被改动的加密模式，与单纯 AES-CBC 不同。"
+ },
+ {
+  "id": "term-client-side-encryption",
+  "term": "客户端加密",
+  "brief": "在用户设备上先行加密，再把密文发送给服务器。"
+ },
+ {
+  "id": "term-component-hardening",
+  "term": "组件加固",
+  "brief": "加固智能体的单个组件（如模型、记忆或工具），以抵御针对它的攻击。"
+ },
+ {
+  "id": "term-end-to-end-encryption",
+  "term": "端到端加密",
+  "brief": "只有通信两端持有密钥、服务器只经手无法读取的密文的设计。"
+ },
+ {
+  "id": "term-key-substitution",
+  "term": "密钥替换",
+  "brief": "把受害者的公钥换成攻击者的公钥，使后续通信被加密给攻击者。"
+ },
+ {
+  "id": "term-key-wrapping",
+  "term": "密钥封装",
+  "brief": "用一把密钥加密另一把密钥，使被封装者可安全存储或传输。"
+ },
+ {
+  "id": "term-prompt-injection",
+  "term": "提示注入",
+  "brief": "攻击者构造内容，使智能体执行恶意指令而非用户或开发者本意的攻击。"
+ },
+ {
+  "id": "term-runtime-protection",
+  "term": "运行时防护",
+  "brief": "在智能体执行过程中实施安全约束、实时检测威胁与行为的防护机制。"
+ },
+ {
+  "id": "term-secure-by-design",
+  "term": "安全设计",
+  "brief": "把安全性构建进智能体的结构与设计选择中，而非在运行时才追加。"
+ },
+ {
+  "id": "term-self-hosting",
+  "term": "自托管",
+  "brief": "把产品的服务端组件部署在自己的基础设施上，而非依赖厂商。"
+ },
+ {
+  "id": "term-vault-key",
+  "term": "保险库密钥",
+  "brief": "真正加密保险库的密钥，它本身由主密码派生的密钥保护。"
+ },
+ {
+  "id": "term-ciphertext-integrity",
+  "term": "密文完整性",
+  "brief": "攻击者无法在不被察觉的情况下改动所存或所传密文的性质。"
+ },
+ {
+  "id": "term-coordinated-vulnerability-disclosure",
+  "term": "协同漏洞披露",
+  "brief": "先私下向厂商报告漏洞，商定发表日期后再公开的做法。"
+ },
+ {
+  "id": "term-defense-in-depth",
+  "term": "纵深防御",
+  "brief": "叠加多层相互独立的防护，使任一防护失效都不至于让攻击得逞的原则。"
+ },
+ {
+  "id": "term-iteration-count",
+  "term": "迭代次数",
+  "brief": "密钥派生函数重复的轮数，决定猜测口令所需的代价。"
+ },
+ {
+  "id": "term-oblivious-client-operations",
+  "term": "不经意客户端操作",
+  "brief": "客户端在不向服务器泄露自己访问内容的前提下完成操作的目标。"
+ },
+ {
+  "id": "term-vault-indistinguishability",
+  "term": "保险库不可区分性",
+  "brief": "攻击者连保险库彼此都区分不开的目标，比只知道明文更进一步。"
+ },
+ {
+  "id": "term-action-space",
+  "term": "动作空间",
+  "brief": "智能体借助工具可执行的操作集合，包含读、写、执行三类。"
+ },
+ {
+  "id": "term-aes-cbc-hmac",
+  "term": "AES-CBC-HMAC 认证加密",
+  "brief": "用 AES-CBC 加密再对密文做 HMAC；Bitwarden 的构造，缺少 MAC 密钥时退化为纯 AES-CBC。"
+ },
+ {
+  "id": "term-ai-agent",
+  "term": "AI 智能体",
+  "brief": "把传统软件组件与神经组件组合起来，接收任务并为用户采取一系列动作的混合软件系统。"
+ },
+ {
+  "id": "term-extended-master-key",
+  "term": "扩展主密钥",
+  "brief": "Bitwarden 中由主密钥的 enc 与 mac 输出拼接成的 64 字节密钥 k_em。"
+ },
+ {
+  "id": "term-model-context-protocol-mcp",
+  "term": "模型上下文协议",
+  "brief": "一种标准化协议，工具可经其实现并供智能体调用。"
+ },
+ {
+  "id": "term-organisation-key",
+  "term": "团队密钥",
+  "brief": "加密 Bitwarden 团队条目的 64 字节对称密钥 k_org；能否取得它即决定成员资格。"
+ },
+ {
+  "id": "term-per-item-key",
+  "term": "逐条目密钥",
+  "brief": "为单个保险库条目采样、本身又由用户密钥加密的密钥，Bitwarden 自 2024.2.0 起用于新条目。"
+ },
+ {
+  "id": "term-retrieval-tool",
+  "term": "检索工具",
+  "brief": "赋予智能体对外部环境只读访问的工具（如搜索或读取文件），区别于会修改环境的工具。"
+ },
+ {
+  "id": "term-user-key",
+  "term": "用户密钥",
+  "brief": "保护 Bitwarden 或 LastPass 保险库中所有条目的 64 字节对称密钥，在服务器上仅以密文存在。"
+ },
+ {
+  "id": "term-access-sensitivity",
+  "term": "访问敏感度",
+  "brief": "智能体可触达的敏感数据范围，从不访问，到已知敏感数据源，再到任意敏感数据。"
+ },
+ {
+  "id": "term-agent-design-dimensions",
+  "term": "智能体设计维度",
+  "brief": "刻画智能体设计及其灵活性的七个维度：输入信任、访问敏感性、工作流、动作、记忆、工具、用户界面。"
+ },
+ {
+  "id": "term-attack-surface",
+  "term": "攻击面",
+  "brief": "攻击者可以借此触达系统的接口集合；对智能体而言，外部数据、记忆与第三方工具都会扩大它。"
+ },
+ {
+  "id": "term-design-dimension",
+  "term": "设计维度",
+  "brief": "刻画智能体设计的七条轴之一，每条轴都是一条从最不灵活到最灵活的连续谱。"
+ },
+ {
+  "id": "term-design-flexibility",
+  "term": "设计灵活性",
+  "brief": "智能体设计在各维度上偏向最不灵活或最灵活一端的程度；灵活性越大通常越放大安全风险。"
+ },
+ {
+  "id": "term-developer-defined-workflow",
+  "term": "开发者定义的工作流",
+  "brief": "由开发者事先写定的固定动作序列，是工作流维度的中等灵活档位。"
+ },
+ {
+  "id": "term-execution-action",
+  "term": "执行动作",
+  "brief": "会修改环境而非只读取环境的操作，是动作维度的最灵活档位。"
+ },
+ {
+  "id": "term-flexibility-spectrum",
+  "term": "灵活性连续谱",
+  "brief": "一个设计维度可取值的范围，用最不灵活、中等灵活、最灵活三个代表性档位表示。"
+ },
+ {
+  "id": "term-input-trust",
+  "term": "输入信任",
+  "brief": "智能体所依赖的外部数据源的可信程度，从不使用外部数据到任意的、可能不可信的来源。"
+ },
+ {
+  "id": "term-llm-defined-workflow",
+  "term": "大模型定义的工作流",
+  "brief": "由模型在运行时组合、而非事先固定的动作序列，是工作流维度的最灵活档位。"
+ },
+ {
+  "id": "term-orthogonal-dimensions",
+  "term": "正交维度",
+  "brief": "各设计维度可共存于同一个智能体、且可在不同维度上处于不同档位的性质。"
+ },
+ {
+  "id": "term-persistent-cross-session-memory",
+  "term": "跨会话持久记忆",
+  "brief": "存活期长于单次会话的记忆，是记忆维度的最灵活档位。"
+ },
+ {
+  "id": "term-retrieval-capability",
+  "term": "检索能力",
+  "brief": "对外部环境的只读访问，是动作维度中介于回复与执行之间的档位。"
+ },
+ {
+  "id": "term-risk-taxonomy",
+  "term": "风险分类",
+  "brief": "按组件组织的智能体安全风险目录，从 R1 到 R7，设计维度映射到它之上。"
+ },
+ {
+  "id": "term-rsa-oaep",
+  "term": "RSA-OAEP 加密",
+  "brief": "带 OAEP 填充的 RSA 加密，在 LastPass 与 Bitwarden 中用接收者公钥包裹对称密钥。"
+ },
+ {
+  "id": "term-shared-folder-key",
+  "term": "共享文件夹密钥",
+  "brief": "加密 LastPass 共享文件夹中各条目的 32 字节密钥 k_shr，对每个接收者用 RSA-OAEP 包裹。"
+ },
+ {
+  "id": "term-transient-session-memory",
+  "term": "会话内临时记忆",
+  "brief": "仅在当前会话内留存、会话结束即被丢弃的记忆。"
+ },
+ {
+  "id": "term-payload-string",
+  "term": "载荷字符串",
+  "brief": "Dashlane 事务内容开头的若干字节，规定 KDF 及其参数、分组密码与工作模式。"
+ },
+ {
+  "id": "term-transaction-key",
+  "term": "事务密钥",
+  "brief": "Dashlane 由主密钥与事务参数派生的、用于加密单个事务内容的密钥。"
+ },
+ {
+  "id": "term-transactional-database",
+  "term": "事务型数据库",
+  "brief": "Dashlane 保险库的表示形式，每个事务创建一个、修改一个或删除一个条目。"
+ },
+ {
+  "id": "term-attack-vector",
+  "term": "攻击向量",
+  "brief": "攻击者进入并影响智能体系统的具体途径，如间接提示注入或工具投毒。"
+ },
+ {
+  "id": "term-direct-prompt-injection",
+  "term": "直接提示注入",
+  "brief": "用户或界面直接发给智能体的恶意提示词，指示它违背系统提示词行事。"
+ },
+ {
+  "id": "term-external-adversary",
+  "term": "外部对手",
+  "brief": "对智能体系统无访问权限，仅通过控制智能体可能检索的网页等资源施加影响。"
+ },
+ {
+  "id": "term-indirect-prompt-injection",
+  "term": "间接提示注入",
+  "brief": "把指令藏在智能体检索到的内容（网页、文档、邮件等）中，诱导模型照做。"
+ },
+ {
+  "id": "term-internal-adversary",
+  "term": "内部对手",
+  "brief": "以开发者或组件供应商身份访问模型、记忆等组件，论文称其为最难实现的攻击。"
+ },
+ {
+  "id": "term-key-authentication",
+  "term": "密钥认证",
+  "brief": "确认服务器下发的公钥确实属于它声称的那一方。"
+ },
+ {
+  "id": "term-malicious-data-injection",
+  "term": "恶意数据注入",
+  "brief": "投递数据而非指令，如被幻觉出的包名，在敏感操作中被使用时造成危害。"
+ },
+ {
+  "id": "term-memory-poisoning",
+  "term": "记忆投毒",
+  "brief": "直接操纵智能体持久记忆以注入内容、改变行为或泄露数据，写入会跨会话存续。"
+ },
+ {
+  "id": "term-mitre-atlas",
+  "term": "MITRE ATLAS",
+  "brief": "针对 AI 系统的对手战术与技术公开知识库，附录 A 把本文攻击向量映射到它。"
+ },
+ {
+  "id": "term-model-poisoning",
+  "term": "模型投毒",
+  "brief": "由模型供应商或供应链在模型内植入隐藏的恶意行为，使其执行未授权动作或泄露数据。"
+ },
+ {
+  "id": "term-package-hallucination",
+  "term": "软件包幻觉",
+  "brief": "代码生成模型凭空编造包名的缺陷，攻击者抢注这些包名以植入恶意软件包。"
+ },
+ {
+  "id": "term-rag-poisoning",
+  "term": "检索增强生成投毒",
+  "brief": "污染检索增强智能体所依赖的知识，使投毒条目被检索并影响后续行为。"
+ },
+ {
+  "id": "term-threat-model",
+  "term": "威胁模型",
+  "brief": "对攻击者身份及其可触及范围的分类，用于按对手能力归并攻击向量。"
+ },
+ {
+  "id": "term-tool-poisoning",
+  "term": "工具投毒",
+  "brief": "第三方工具的名称、描述或实现中夹带恶意提示词或代码，随工具定义被加载。"
+ },
+ {
+  "id": "term-user-level-adversary",
+  "term": "用户级对手",
+  "brief": "以恶意用户身份直接接触智能体，或作为第三方污染正常用户的输入。"
+ },
+ {
+  "id": "term-account-recovery-ciphertext",
+  "term": "账户恢复密文",
+  "brief": "用户加入恢复时客户端发出的密文 c_rec，即用组织公钥加密的用户密钥。"
+ },
+ {
+  "id": "term-account-recovery-policy",
+  "term": "账户恢复策略",
+  "brief": "组织侧设置，决定成员是否加入恢复、以及加入组织时是否自动纳入。"
+ },
+ {
+  "id": "term-auto-enrolment",
+  "term": "自动纳入",
+  "brief": "用户加入组织时无需任何交互即自动加入账户恢复。"
+ },
+ {
+  "id": "term-key-rotation",
+  "term": "密钥轮换",
+  "brief": "把用户密钥换成新采样的密钥；Bitwarden 在用户修改主密码时可选提供。"
+ },
+ {
+  "id": "term-organisation-private-key",
+  "term": "组织私钥",
+  "brief": "Bitwarden 组织密钥对中的私钥 sk_org，该组织每位成员都持有。"
+ },
+ {
+  "id": "term-organisation-public-key",
+  "term": "组织公钥",
+  "brief": "Bitwarden 成员加入账户恢复时，客户端用来加密用户密钥的公钥 pk_org。"
+ },
+ {
+  "id": "term-self-enrolment",
+  "term": "手动纳入",
+  "brief": "需要用户主动操作的手动账户恢复加入方式。"
+ },
+ {
+  "id": "term-master-password-reset",
+  "term": "主密码重置",
+  "brief": "LastPass 企业版功能，允许超级管理员重置团队成员的主密码。"
+ },
+ {
+  "id": "term-super-admin",
+  "term": "超级管理员",
+  "brief": "LastPass 团队中的特权账户，可以重置其他成员的主密码。"
+ },
+ {
+  "id": "term-associated-data",
+  "term": "关联数据",
+  "brief": "与密文一起被认证、但本身不加密的数据，用来把密文绑定到它的上下文。"
+ },
+ {
+  "id": "term-data-corruption",
+  "term": "数据损坏",
+  "brief": "对文件、数据库等存储资源的未授权修改，R6 下的两类完整性问题之一。"
+ },
+ {
+  "id": "term-heterogeneous-untrusted-interfaces",
+  "term": "异构不可信接口",
+  "brief": "智能体暴露的外部数据源、持久记忆与信任级别各异的第三方工具等攻击入口。"
+ },
+ {
+  "id": "term-icon-url-item-decryption",
+  "term": "图标 URL 条目解密",
+  "brief": "把字段密文放进客户端取图标用的 URL 字段，从而把解密后的内容泄漏出去。"
+ },
+ {
+  "id": "term-item-field-swapping",
+  "term": "条目字段交换",
+  "brief": "把密文从条目的一个字段搬到另一个字段或搬到别的条目，因为没有东西把它绑定到字段。"
+ },
+ {
+  "id": "term-item-level-vault-encryption",
+  "term": "条目级保险库加密",
+  "brief": "把保险库中的每个条目分别存储、分别加密，而不是整体加密。"
+ },
+ {
+  "id": "term-kdf-iteration-count",
+  "term": "KDF 迭代次数",
+  "brief": "决定基于口令的密钥派生有多昂贵的参数，也就是猜测一次口令的成本。"
+ },
+ {
+  "id": "term-private-data-leakage",
+  "term": "私有数据泄露",
+  "brief": "借助组件交互未授权获取用户对话、持久记忆、工具凭据或环境资源。"
+ },
+ {
+  "id": "term-prompt-stealing-attack",
+  "term": "提示窃取攻击",
+  "brief": "从已部署的模型或智能体中提取编码专有知识的系统提示、工具描述或配置。"
+ },
+ {
+  "id": "term-resource-drain",
+  "term": "资源耗尽",
+  "brief": "昂贵 API 调用、被迫的无限循环或过度内存占用，使智能体及外部系统不可用或难以为继。"
+ },
+ {
+  "id": "term-security-risk-taxonomy",
+  "term": "安全风险分类法",
+  "brief": "把七条智能体安全风险（R1–R7）对应到攻击者可瞄准组件的分类框架。"
+ },
+ {
+  "id": "term-server-side-request-forgery",
+  "term": "服务端请求伪造",
+  "brief": "领域特定漏洞 SSRF，智能体可被操纵利用它触达受保护的内部资源。"
+ },
+ {
+  "id": "term-side-channel-risk",
+  "term": "侧信道风险",
+  "brief": "经工具执行耗时、API 调用序列或网络流量模式等可观察行为泄露的信息。"
+ },
+ {
+  "id": "term-transaction-replay",
+  "term": "事务重放",
+  "brief": "复制、重排或删除 Dashlane 事务，而客户端无法察觉。"
+ },
+ {
+  "id": "term-unconstrained-data-flow",
+  "term": "无约束数据流",
+  "brief": "大模型缺少类型系统与访问控制，数据可从不可信输入自由流向任意输出。"
+ },
+ {
+  "id": "term-url-checksum",
+  "term": "URL 校验和",
+  "brief": "把条目 URL 的哈希存进另一个加密字段，供客户端发现 URL 被调换。"
+ },
+ {
+  "id": "term-vault-integrity",
+  "term": "保险库完整性",
+  "brief": "保证保险库中的条目与设置仍是用户存下的那一份，形式与顺序都未被改动。"
+ },
+ {
+  "id": "term-wrong-instruction-following",
+  "term": "错误指令跟随",
+  "brief": "智能体执行攻击者注入的提示，而非良性用户或开发者本来的指令。"
+ },
+ {
+  "id": "term-consequence-risks",
+  "term": "后果类风险",
+  "brief": "R5、R6、R7，其严重程度由访问敏感度、操作与用户界面决定，而非是否发生。"
+ },
+ {
+  "id": "term-key-transparency",
+  "term": "密钥透明",
+  "brief": "讲者为共享提出的对策：为公钥建立可审计的公开记录，以便发现被替换的公钥。"
+ },
+ {
+  "id": "term-model-risks",
+  "term": "模型风险",
+  "brief": "论文把 R2、R3、R4 归为一组模型风险，主要由工作流设计维度驱动。"
+ },
+ {
+  "id": "term-risk-amplification",
+  "term": "风险放大",
+  "brief": "攻击面扩大助推模型风险，模型风险再放大后果类风险的级联过程。"
+ },
+ {
+  "id": "term-sharing-key-overwrite",
+  "term": "共享密钥覆写",
+  "brief": "攻击 LP07 与 DL02：恶意服务器在共享时替换接收方公钥，使共享密钥被加密到它掌握的密钥之下。"
+ },
+ {
+  "id": "term-organisation-injection",
+  "term": "组织注入",
+  "brief": "攻击 BW08：任何人只要把组织密钥加密到某用户公钥之下，就能把该用户加入组织。"
+ },
+ {
+  "id": "term-organisation-overwrite",
+  "term": "组织覆写",
+  "brief": "攻击 BW09：服务器把新建组织的加密组织密钥与数据替换成自己控制的值。"
+ },
+ {
+  "id": "term-organisation-rsa-keypair",
+  "term": "组织 RSA 密钥对",
+  "brief": "Bitwarden 随组织创建的恢复密钥对，其私钥用 k_org 加密成 c_skOrg。"
+ },
+ {
+  "id": "term-organisation-symmetric-key",
+  "term": "组织对称密钥",
+  "brief": "Bitwarden 加密组织内共享条目所用的 64 字节密钥 k_org，以各成员的 RSA 公钥加密后保存。"
+ },
+ {
+  "id": "term-disable-per-item-keys",
+  "term": "禁用条目级密钥",
+  "brief": "攻击 BW10（详见论文完整版）：降级密钥层级，使条目重新直接用用户密钥加密。"
+ },
+ {
+  "id": "term-downgrade-to-legacy",
+  "term": "降级到旧格式",
+  "brief": "攻击 BW12：伪造出没有 MAC 半段的用户密钥，使 Bitwarden 改用纯 CBC 模式，从而打开填充预言。"
+ },
+ {
+  "id": "term-encryption-type-attribute",
+  "term": "加密类型属性",
+  "brief": "Bitwarden 密文前不受保护的标记：type 0 表示认证加密，type 1 表示纯 AES-CBC。"
+ },
+ {
+  "id": "term-heisenberg-attack",
+  "term": "海森堡攻击",
+  "brief": "讲者对 Bitwarden 的 BW11 与 BW12 的合称：两个方向各以放弃完整性或机密性之一为代价。"
+ },
+ {
+  "id": "term-known-plaintext-oracle-gadget",
+  "term": "已知明文预言器",
+  "brief": "攻击 BWb1：借 Bitwarden 生成密钥对的迁移路径，在未知主密钥下取得已知明文的 AES-CBC 密文。"
+ },
+ {
+  "id": "term-user-key-overwriting",
+  "term": "用户密钥覆写",
+  "brief": "攻击 BW11：伪造出加密半段为己所知的用户密钥密文，使此后新加密的条目失去机密性。"
+ },
+ {
+  "id": "term-cbc-only-downgrade",
+  "term": "纯 CBC 降级",
+  "brief": "攻击 DL05：伪造的 Dashlane 设置让客户端此后一律以纯 CBC 加密事务，暴露于填充预言之下。"
+ },
+ {
+  "id": "term-item-injection",
+  "term": "条目注入",
+  "brief": "攻击 DL03：利用 Dashlane 的加密预言 DLb2 伪造任意事务，包括 Setting 事务。"
+ },
+ {
+  "id": "term-payload-format",
+  "term": "payload 格式",
+  "brief": "Dashlane 事务开头标明其密钥派生函数、密码算法与工作模式；KWC3 为旧格式，Flexible 为当前格式。"
+ },
+ {
+  "id": "term-contextual-security",
+  "term": "上下文安全",
+  "brief": "智能体特有目标：上下文与用户意图任务保持一致，避免指令覆盖与上下文漂移。"
+ },
+ {
+  "id": "term-input-guardrail",
+  "term": "输入护栏",
+  "brief": "在输入到达智能体之前校验、过滤恶意指令与数据的第一道防线。"
+ },
+ {
+  "id": "term-output-guardrail",
+  "term": "输出护栏",
+  "brief": "检查智能体对外行为（回复、工具调用）的机制，校验任务对齐与工具使用安全。"
+ },
+ {
+  "id": "term-declassification",
+  "term": "安全标签降级",
+  "brief": "在安全时原则性地放宽安全标签，使易发生标签蔓延的智能体保持可用而不失安全。"
+ },
+ {
+  "id": "term-information-flow-control",
+  "term": "信息流控制",
+  "brief": "为数据分配信息流格中的安全标签并传播，阻断违反格约束的流动。"
+ },
+ {
+  "id": "term-information-flow-lattice",
+  "term": "信息流格",
+  "brief": "预定义的安全标签偏序结构，信息流控制据此分配标签并判定允许的传播。"
+ },
+ {
+  "id": "term-label-creep",
+  "term": "标签蔓延",
+  "brief": "保守标签传播的失效：标签过于严格使智能体不可用，除非有安全的降级规则。"
+ },
+ {
+  "id": "term-over-tainting",
+  "term": "过度污点标记",
+  "brief": "把超出必要范围的数据标为不可信；基于变量的方法以可追踪变量缓解该问题。"
+ },
+ {
+  "id": "term-security-label",
+  "term": "安全标签",
+  "brief": "信息流控制中标记单份数据可信或保密级别的标签，决定哪些流动被允许。"
+ },
+ {
+  "id": "term-taint-tracking",
+  "term": "污点追踪",
+  "brief": "标记不可信数据并追踪其传播，从而约束受不可信来源影响的数据。"
+ },
+ {
+  "id": "term-log-granularity",
+  "term": "日志粒度",
+  "brief": "智能体活动日志的粗细程度：越细越易检出异常，但存储、计算与隐私代价越高。"
+ },
+ {
+  "id": "term-monitoring",
+  "term": "监控",
+  "brief": "对输入、输出与中间状态提供全局可见性，揭示单个动作看不出的分布式威胁。"
+ },
+ {
+  "id": "term-decision-fatigue",
+  "term": "决策疲劳",
+  "brief": "频繁验证提示导致的判断力下降，使使用者盲目批准高风险动作或误拒良性动作。"
+ },
+ {
+  "id": "term-human-in-the-loop-validation",
+  "term": "人在回路验证",
+  "brief": "智能体在高风险动作前请求用户批准，由用户掌控安全决策的防护机制。"
+ },
+ {
+  "id": "term-containerisation",
+  "term": "容器化",
+  "brief": "既有的操作系统隔离机制，智能体的权限分离可复用它来沙箱化外部环境。"
+ },
+ {
+  "id": "term-horizontal-privilege-separation",
+  "term": "横向权限分离",
+  "brief": "让并行子智能体在互不相交的访问范围上运行的权限分离，如 IsolateGPT 为每个应用派生一个智能体。"
+ },
+ {
+  "id": "term-memory-separation",
+  "term": "内存分离",
+  "brief": "创建彼此独立的内存空间，使低权限组件读不到其他组件持有的敏感数据。"
+ },
+ {
+  "id": "term-planner-parser-separation",
+  "term": "规划器—解析器分离",
+  "brief": "把智能体对 LLM 的使用拆成工具调用规划与工具结果解析，使外部数据无法左右规划决策。"
+ },
+ {
+  "id": "term-privilege-separation",
+  "term": "权限分离",
+  "brief": "给不同组件分配不同权限并加以隔离，使控制一个组件的攻击者无法触及其余组件。"
+ },
+ {
+  "id": "term-sandboxing",
+  "term": "沙箱化",
+  "brief": "把工具或环境限制在受限的执行副本中，PFI 即按数据信任级别在普通版与沙箱版之间切换工具。"
+ },
+ {
+  "id": "term-utility-loss",
+  "term": "效用损失",
+  "brief": "权限分离把功能拆到必须相互通信的隔离组件之后，智能体所损失的能力。"
+ },
+ {
+  "id": "term-vertical-privilege-separation",
+  "term": "纵向权限分离",
+  "brief": "分层式的权限分离，可信规划器位于低权限解析器之上，工具结果不会直接流入规划。"
+ },
+ {
+  "id": "term-formal-verification",
+  "term": "形式化验证",
+  "brief": "依据系统的形式模型证明某项性质；用于智能体时模型须刻画随机行为才有意义。"
+ },
+ {
+  "id": "term-pushdown-automaton",
+  "term": "下推自动机",
+  "brief": "Formal-LLM 用以编码工具调用顺序等规划约束、限制规划生成的机器模型。"
+ },
+ {
+  "id": "term-rule-circuit",
+  "term": "规则电路",
+  "brief": "ShieldAgent 把外部政策文档声明式编码为作用于动作轨迹的电路，用以强制政策合规。"
+ },
+ {
+  "id": "term-identity-and-access-management",
+  "term": "身份与访问管理",
+  "brief": "涵盖身份管理、访问控制与凭证管理的总体领域，确保实体通过认证、访问获得授权。"
+ },
+ {
+  "id": "term-interoperable-identity",
+  "term": "可互操作的身份",
+  "brief": "智能体身份在各平台间按共同分类体系签发、委托与撤销的能力，使动作可审计、可问责。"
+ },
+ {
+  "id": "term-proxy-delegation",
+  "term": "代理委托",
+  "brief": "让智能体经由中间服务或令牌代表用户行事，是论文所列三种委托模型之一。"
+ },
+ {
+  "id": "term-single-sign-on",
+  "term": "单点登录",
+  "brief": "在多个服务间统一认证与授权的机制；Okta 与 Composio 用它管理智能体访问与凭证供给。"
+ },
+ {
+  "id": "term-task-level-identity",
+  "term": "任务级身份",
+  "brief": "为特定任务或会话创建的短生命周期身份，实现动态最小权限而非长期身份。"
+ },
+ {
+  "id": "term-capability-based-security",
+  "term": "基于能力的安全",
+  "brief": "持有不可伪造的能力令牌即获得访问权的访问控制机制，与 RBAC、ABAC 并列。"
+ },
+ {
+  "id": "term-coordinated-credential-orchestration",
+  "term": "协同凭证编排",
+  "brief": "在整个智能体栈（含多智能体）中标准化、统一地管理密钥的需求，取代把密钥存为未加密环境变量的临时做法。"
+ },
+ {
+  "id": "term-credential-provisioning",
+  "term": "凭证供给",
+  "brief": "智能体取得凭证的方式，即经由单点登录或基于 OAuth 2.0 的认证委托。"
+ },
+ {
+  "id": "term-dynamic-credential-management",
+  "term": "动态凭证管理",
+  "brief": "使用到期自动失效的限时令牌，缩小暴露窗口，代价是续期复杂、可能中断服务。"
+ },
+ {
+  "id": "term-trusted-execution-environment",
+  "term": "可信执行环境",
+  "brief": "基于硬件的隔离区域，机密计算在其中管理智能体凭证，使其免受外围软件触及。"
+ },
+ {
+  "id": "term-shadowing-attack",
+  "term": "遮蔽攻击",
+  "brief": "恶意工具结果覆盖其他工具结果的攻击，指令层级微调无法应对。"
+ },
+ {
+  "id": "term-complete-mediation",
+  "term": "完全中介",
+  "brief": "设计原则：对敏感资源的每次访问都须经检查与验证，由监控与访问控制落实。"
+ },
+ {
+  "id": "term-economy-of-mechanisms",
+  "term": "机制经济性",
+  "brief": "论文点名的另一条适用原则：以最少机制达成防护，使设计可审计、可维护。"
+ },
+ {
+  "id": "term-fail-safe-defaults",
+  "term": "故障安全默认",
+  "brief": "论文点名的另一条适用原则：失效时默认拒绝而非放行。"
+ },
+ {
+  "id": "term-principle-of-least-privilege",
+  "term": "最小权限原则",
+  "brief": "智能体只应持有任务所需的最小权限与访问权，使被攻陷的影响不超出该任务。"
+ },
+ {
+  "id": "term-authenticated-encryption-ae",
+  "term": "认证加密",
+  "brief": "同时证明密文未被改动的加密，使篡改会被发现而非静默解密。"
+ },
+ {
+  "id": "term-authenticated-encryption-with-associated-data-aead",
+  "term": "关联数据认证加密",
+  "brief": "认证加密的扩展，还保护留在明文的关联数据（如 PBKDF 参数）。"
+ },
+ {
+  "id": "term-certificate-authority-ca",
+  "term": "证书颁发机构",
+  "brief": "为公钥签名的机构；在密码管理器场景中必须不隶属于保险库服务器的控制方。"
+ },
+ {
+  "id": "term-ciphertext-authentication",
+  "term": "密文认证",
+  "brief": "证明密文由谁生成；公钥加密本身做不到，因为任何人都能加密。"
+ },
+ {
+  "id": "term-data-origin-authentication",
+  "term": "数据来源认证",
+  "brief": "保证消息确实来自具名发送者；任何公钥加密方案本身都无法提供。"
+ },
+ {
+  "id": "term-forced-migration",
+  "term": "强制迁移",
+  "brief": "只负责把保险库迁移到新格式的客户端，使破坏性变更覆盖所有用户。"
+ },
+ {
+  "id": "term-hardware-security-module-hsm",
+  "term": "硬件安全模块",
+  "brief": "防篡改硬件，可保管恢复密钥，并对服务器是否诚实运行提供一定保证。"
+ },
+ {
+  "id": "term-key-separation-ks",
+  "term": "密钥分离",
+  "brief": "为每个条目、每个字段派生独立密钥，使一个密钥无法冒充另一个。"
+ },
+ {
+  "id": "term-merkle-tree",
+  "term": "默克尔树",
+  "brief": "认证整个保险库的哈希结构，用于阻止选择性删除攻击。"
+ },
+ {
+  "id": "term-public-key-authentication-pka",
+  "term": "公钥认证",
+  "brief": "把公钥与其所有者绑定，可通过证书、首次使用信任或已验证密钥目录实现。"
+ },
+ {
+  "id": "term-trust-on-first-use-tofu",
+  "term": "首次使用信任",
+  "brief": "首次见到公钥时记住它，此后变化即告警，把密钥替换限制在首次使用。"
+ },
+ {
+  "id": "term-verified-key-directory-vkd",
+  "term": "已验证密钥目录",
+  "brief": "一种目录，虽不能阻止服务器发布错误公钥，却能让篡改对用户可见。"
+ },
+ {
+  "id": "term-cryptographic-agility",
+  "term": "密码敏捷性",
+  "brief": "通过剧烈但干净的破坏性变更，避免历史密码学攻击卷土重来的做法。"
+ },
+ {
+  "id": "term-design-anti-pattern",
+  "term": "设计反模式",
+  "brief": "在不同产品中反复出现、导致漏洞的坏设计习惯。"
+ },
+ {
+  "id": "term-disclosure-window",
+  "term": "披露窗口",
+  "brief": "双方约定的、期间不对外公开问题的期限，这里是至少 90 天。"
+ },
+ {
+  "id": "term-hardware-security-module",
+  "term": "硬件安全模块",
+  "brief": "专门硬件，用于保管密钥并执行服务运营方无法篡改的操作。"
+ },
+ {
+  "id": "term-trust-on-first-use",
+  "term": "首次使用信任",
+  "brief": "首次见到公钥时予以接受、日后变化则告警的方案。"
+ },
+ {
+  "id": "term-verified-key-directory",
+  "term": "验证密钥目录",
+  "brief": "让服务商错误关联公钥的行为对用户可见的目录机制。"
+ }
+]

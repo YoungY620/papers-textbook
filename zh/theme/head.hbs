@@ -1,0 +1,30 @@
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    tags: "none",
+    macros: {
+      coloneqq: "\\mathrel{:=}",
+      eqqcolon: "\\mathrel{=:}",
+      textsc: ["\\mathrm{#1}", 1],
+      ttsc: ["\\mathrm{#1}", 1],
+      msc: ["\\mathcal{#1}", 1],
+      concat: "\\mathbin{\\|}"
+    }
+  },
+  options: {
+    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+    ignoreHtmlClass: "bd-math-skip",
+    processHtmlClass: "bd-math-process"
+  },
+  output: {
+    displayOverflow: "linebreak"
+  },
+  startup: {
+    typeset: true
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
