@@ -26,4 +26,6 @@
   - [Design principles, open challenges and conclusion](./papers/agentic-ai-sok/ch09-principles-and-open-challenges.md)
   - [Related work and baselines](./papers/agentic-ai-sok/ch10-related-work.md)
   - [References and source material](./papers/agentic-ai-sok/sources.md)
+
+
 [Glossary](./glossary.md)

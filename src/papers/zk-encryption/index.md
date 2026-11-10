@@ -36,7 +36,7 @@ Every chapter states, at the end, a short list of the points it established.
 Notation and the attack identifiers (BW01…BW12, LP01…LP07, DL01…DL06) follow
 the paper, so a chapter can be read alongside the relevant section of the PDF.
 Terms that carry a specific meaning here are highlighted in the text: hovering
-one shows a one-line gloss, and clicking it opens the [glossary](glossary.md).
+one shows a one-line gloss, and clicking it opens the [glossary](../../glossary.md).
 
 Mathematics is typeset with MathJax. Where the paper and the talk describe the
 same mechanism differently, the paper is authoritative and the difference is

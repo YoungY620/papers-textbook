@@ -41,7 +41,7 @@ risks it covers. A claim in this book should be traceable to the paper's own
 tables by those identifiers.
 
 Terms that carry a specific meaning here are highlighted in the text: hovering
-one shows a one-line gloss, and clicking it opens the [glossary](glossary.md).
+one shows a one-line gloss, and clicking it opens the [glossary](../../glossary.md).
 
 ## Source material
 
