@@ -46,4 +46,4 @@ Dashlane 6 个。
 ---
 
 本书由 **course-textbook-builder** 流程生成
-（https://gist.github.com/YoungY620/d4932154735b55903d5a53b5f6f406c9）。
+（https://github.com/YoungY620/my-awesome-skills）。

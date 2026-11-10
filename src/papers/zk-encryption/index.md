@@ -55,4 +55,4 @@ the vendor disclosure statements.
 ---
 
 This book was produced by the **course-textbook-builder** workflow
-(https://gist.github.com/YoungY620/d4932154735b55903d5a53b5f6f406c9).
+(https://github.com/YoungY620/my-awesome-skills).

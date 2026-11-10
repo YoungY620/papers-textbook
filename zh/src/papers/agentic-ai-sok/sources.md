@@ -43,4 +43,4 @@ Markdown，并对照页面图像核对。中文与英文是并行撰写而非互
 ---
 
 本书由 **course-textbook-builder** 流程生成
-（https://gist.github.com/YoungY620/d4932154735b55903d5a53b5f6f406c9）。
+（https://github.com/YoungY620/my-awesome-skills）。
