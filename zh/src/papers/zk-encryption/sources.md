@@ -55,4 +55,4 @@ Scarlata，USENIX，时长 19 分钟。
 ---
 
 本书由 **course-textbook-builder** 流程生成
-（https://github.com/YoungY620/my-awesome-skills）。
+（<https://github.com/YoungY620/my-awesome-skills>）。

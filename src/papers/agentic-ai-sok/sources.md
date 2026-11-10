@@ -52,4 +52,4 @@ can be traced to the paper's own tables.
 ---
 
 This book was produced by the **course-textbook-builder** workflow
-(https://github.com/YoungY620/my-awesome-skills).
+(<https://github.com/YoungY620/my-awesome-skills>).

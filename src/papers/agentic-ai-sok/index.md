@@ -54,4 +54,4 @@ volume on password managers, this book has a single source. See
 ---
 
 This book was produced by the **course-textbook-builder** workflow
-(https://github.com/YoungY620/my-awesome-skills).
+(<https://github.com/YoungY620/my-awesome-skills>).

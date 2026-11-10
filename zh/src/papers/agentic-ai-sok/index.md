@@ -44,4 +44,4 @@ SoK（systematisation of knowledge，系统化综述）不是一篇新攻击论�
 ---
 
 本书由 **course-textbook-builder** 流程生成
-（https://github.com/YoungY620/my-awesome-skills）。
+（<https://github.com/YoungY620/my-awesome-skills>）。

@@ -37,4 +37,4 @@ Markdown 并逐格对照页面图像核对；公式由一个预处理器保护�
 ---
 
 本站由 **course-textbook-builder** 流程生成
-（https://github.com/YoungY620/my-awesome-skills）。
+（<https://github.com/YoungY620/my-awesome-skills>）。

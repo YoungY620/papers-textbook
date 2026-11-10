@@ -46,4 +46,4 @@ the direction it belongs to, sourced from the referenced papers themselves.
 ---
 
 This site was produced by the **course-textbook-builder** workflow
-(https://github.com/YoungY620/my-awesome-skills).
+(<https://github.com/YoungY620/my-awesome-skills>).
