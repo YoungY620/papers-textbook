@@ -26,7 +26,8 @@ src/                       English book (site root)
   papers/<slug>/           one directory per paper, assets included
 zh/src/                    Chinese book (published under /zh/)
 glossary.yml               glossary source of truth, merged from per-chapter fragments
-tools/                     math protection, math restore, glossary build/merge
+tools/                     math protection, math restore, glossary build/merge,
+                           internal-link audit
 ```
 
 ## Notes on the build
@@ -47,8 +48,14 @@ Build locally:
 
 ```sh
 pip install pyyaml
-bash build.sh          # -> _site/
+bash build.sh                                      # -> _site/
+node tools/check-links.mjs _site --base /papers-textbook   # no dead links
 ```
+
+`build.sh` does not check links: mdBook resolves `[x](y.md)` relative to the
+chapter file, so moving a chapter (or moving a page chapters link to) breaks
+links silently. `check-links.mjs` resolves every local `href`/`src` in the
+built output against the files on disk.
 
 ---
 
